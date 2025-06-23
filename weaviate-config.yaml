@@ -1,0 +1,13 @@
+version: 2.10.1
+
+# Core Weaviate configuration
+weaviate:
+  # Enable persistence
+  persistence:
+    enabled: true
+    dataPath: "/var/lib/weaviate/data"
+
+  # Enable REST API
+  api:
+    port: 8080
+    scheme: http

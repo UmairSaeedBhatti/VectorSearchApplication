@@ -1,0 +1,808 @@
+[
+  {
+    "plot": "A greedy tycoon decides, on a whim, to corner the world market in wheat. This doubles the price of bread, forcing the grain's producers into charity lines and further into poverty. The film...",
+    "genres": [ "Short", "Drama" ],
+    "title": "A Corner in Wheat",
+    "fullplot": "A greedy tycoon decides, on a whim, to corner the world market in wheat. This doubles the price of bread, forcing the grain's producers into charity lines and further into poverty. The film continues to contrast the ironic differences between the lives of those who work to grow the wheat and the life of the man who dabbles in its sale for profit.",
+    "directors": [ "D.W. Griffith" ],
+    "year": 1909
+  },
+  {
+    plot: "A woman, with the aid of her police officer sweetheart, endeavors to uncover the prostitution ring that has kidnapped her sister, and the philanthropist who secretly runs it.',
+    genres: [ 'Crime', 'Drama' ],
+    title: 'Traffic in Souls',
+    directors: [ 'George Loane Tucker' ],
+    year: 1913
+  },
+  {
+    plot: "A District Attorney's outspoken stand on abortion gets him in trouble with the local community.",
+    genres: [ 'Drama' ],
+    title: 'Where Are My Children?',
+    fullplot: 'While prosecuting a physician for the death of a client after an abortion, the district attorney discovers that his wife helped her society friends and the daughter of her maid obtain and pay for abortions from the physician (and was perhaps herself also a client.)',
+    directors: [ 'Phillips Smalley', 'Lois Weber' ],
+    year: 1916
+  },
+  {
+    plot: 'A penniless young man tries to save an heiress from kidnappers and help her secure her inheritance.',
+    genres: [ 'Comedy', 'Short', 'Action' ],
+    title: 'From Hand to Mouth',
+    fullplot: "As a penniless man worries about how he will manage to eat, he is joined by a young waif and her dog, who are in the same predicament. Meanwhile, across town a dishonest lawyer is working with a gang of criminals, trying to swindle an innocent young heiress out of her inheritance. As the heiress is on her way home from the lawyer's office, she notices the young man and the waif in the midst of their latest problem with the authorities, and she rescues them. Later on, the young man will have an unexpected opportunity to repay her for her kindness.",
+    directors: [ 'Alfred J. Goulding', 'Hal Roach' ],
+    year: 1919
+  },
+  {
+    plot: 'The simple-minded son of a rich financier must find his own way in the world.',
+    genres: [ 'Comedy' ],
+    title: 'The Saphead',
+    fullplot: "Nick Van Alstyne owns the Henrietta silver mine and is very rich. His son Bertie is naive and spoiled. His daughter Rose is married to shady investor Mark. Mark wrecks Bertie's wedding plans by making him take the blame for Mark's illegitimate daughter. Mark also nearly ruins the family business by selling off Henrietta stock at too low a price. Bertie, of all people, must come to the rescue on the trading floor.",
+    directors: [ 'Herbert Blachè', 'Winchell Smith' ],
+    year: 1920
+  },
+  {
+    plot: 'Wlliam deMille produced and directed Miss Lulu Bett, a film of extraordinary conviction and insight. It was then often the custom for unmarried women to lodge with family; thus we discover ...',
+    genres: [ 'Comedy', 'Drama' ],
+    title: 'Miss Lulu Bett',
+    fullplot: 'Wlliam deMille produced and directed Miss Lulu Bett, a film of extraordinary conviction and insight. It was then often the custom for unmarried women to lodge with family; thus we discover Miss Lulu in a boring Midwestern town, an exploited household drudge for her sister and her overbearing brother-in-law. In the course of the story (based upon the Pulitzer Prize play and novel by Zona Gale), Lulu evolves from slavery into an attractive and self-assured woman, prepared to make her own life. Revealed through wonderful performances and clever use of props, the characters are extraordinarily solid and involving.',
+    directors: [ 'William C. de Mille' ],
+    year: 1921
+  },
+  {
+    plot: 'When three thuggish men are responsible for the death of his father and the crippling of his brother, young David must choose between supporting his family or risking his life and exacting vengeance.',
+    genres: [ 'Drama' ],
+    title: "Tol'able David",
+    fullplot: 'When three thuggish men are responsible for the death of his father and the crippling of his brother, young David must choose between supporting his family or risking his life and exacting vengeance.',
+    directors: [ 'Henry King' ],
+    year: 1921
+  },
+  {
+    plot: 'A con artist masquerades a Russian nobility and attempts to seduce the wife of an American diplomat.',
+    genres: [ 'Drama' ],
+    title: 'Foolish Wives',
+    fullplot: '"Count" Karanzim, a Don Juan is with his cousins in Monte Carlo, living from faked money and the money he gets from rich ladies, who are attracted by his charmes and his title or his militaristic and aristocratic behaviour. He tries to have success with Mrs Hughes, the wife of the new US ambassador.',
+    directors: [ 'Erich von Stroheim' ],
+    year: 1922
+  },
+  {
+    plot: 'Cartoon figures announce, via comic strip balloons, that they will move - and move they do, in a wildly exaggerated style.',
+    genres: [ 'Animation', 'Short', 'Comedy' ],
+    title: 'Winsor McCay, the Famous Cartoonist of the N.Y. Herald and His Moving Comics',
+    fullplot: 'Cartoonist Winsor McCay agrees to create a large set of drawings that will be photographed and made into a motion picture. The job requires plenty of drawing supplies, and the cartoonist must also overcome some mishaps caused by an assistant. Finally, the work is done, and everyone can see the resulting animated picture.',
+    directors: [ 'Winsor McCay', 'J. Stuart Blackton' ],
+    year: 1911
+  },
+  {
+    plot: 'Original advertising for the film describes it as a drama of primitive life on the shores of the North Pacific...',
+    genres: [ 'Drama', 'History' ],
+    title: 'In the Land of the Head Hunters',
+    directors: [ 'Edward S. Curtis' ],
+    year: 1914
+  },
+  {
+    plot: 'At 10 years old, Owens becomes a ragged orphan when his sainted mother dies. The Conways, who are next door neighbors, take Owen in, but the constant drinking by Jim soon puts Owen on the ...',
+    genres: [ 'Biography', 'Crime', 'Drama' ],
+    title: 'Regeneration',
+    fullplot: 'At 10 years old, Owens becomes a ragged orphan when his sainted mother dies. The Conways, who are next door neighbors, take Owen in, but the constant drinking by Jim soon puts Owen on the street. By 17, Owen learns that might is right. By 25, Owen is the leader of his own gang who spend most of their time gambling and drinking. But Marie comes into the gangster area of town and everything changes for Owen as he falls for Marie. But he cannot tell her so, so he comes to her settlement to find education and inspiration. But soon, his old way of life will rise to confront him again.',
+    directors: [ 'Raoul Walsh' ],
+    year: 1915
+  },
+  {
+    plot: "A newly wedded couple attempt to build a house with a prefabricated kit, unaware that a rival sabotaged the kit's component numbering.",
+    genres: [ 'Short', 'Comedy' ],
+    title: 'One Week',
+    fullplot: "Buster and Sybil exit a chapel as newlyweds. Among the gifts is a portable house you easily put together in one week. It doesn't help that Buster's rival for Sybil switches the numbers on the crates containing the house parts.",
+    directors: [ 'Edward F. Cline', 'Buster Keaton' ],
+    year: 1920
+  },
+  {
+    plot: 'The cartoonist, Winsor McCay, brings the Dinosaurus back to life in the figure of his latest creation, Gertie the Dinosaur.',
+    genres: [ 'Animation', 'Short', 'Comedy' ],
+    title: 'Gertie the Dinosaur',
+    fullplot: 'Winsor Z. McCay bets another cartoonist that he can animate a dinosaur. So he draws a big friendly herbivore called Gertie. Then he get into his own picture. Gertie walks through the picture, eats a tree, meets her creator, and takes him carefully on her back for a ride.',
+    directors: [ 'Winsor McCay' ],
+    year: 1914
+  },
+  {
+    plot: "Young Pauline is left a lot of money when her wealthy uncle dies. However, her uncle's secretary has been named as her guardian until she marries, at which time she will officially take ...",
+    genres: [ 'Action' ],
+    title: 'The Perils of Pauline',
+    fullplot: `Young Pauline is left a lot of money when her wealthy uncle dies. However, her uncle's secretary has been named as her guardian until she marries, at which time she will officially take possession of her inheritance. Meanwhile, her "guardian" and his confederates constantly come up with schemes to get rid of Pauline so that he can get his hands on the money himself.`,
+    directors: [ 'Louis J. Gasnier', 'Donald MacKenzie' ],
+    year: 1914
+  },
+  {
+    plot: 'An immigrant leaves his sweetheart in Italy to find a better life across the sea in the grimy slums of New York. They are eventually reunited and marry. But life in New York is hard and ...',
+    genres: [ 'Drama' ],
+    title: 'The Italian',
+    fullplot: 'An immigrant leaves his sweetheart in Italy to find a better life across the sea in the grimy slums of New York. They are eventually reunited and marry. But life in New York is hard and tragedy tarnishes their dream of a better life in the new world.',
+    directors: [ 'Reginald Barker' ],
+    year: 1915
+  },
+  {
+    plot: `A rich young Easterner who has always wanted to live in "the Wild West" plans to move to a Western town. Unknown to him, the town's "wild" days are long gone, and it is an orderly, ...`,
+    genres: [ 'Comedy', 'Western', 'Romance' ],
+    title: 'Wild and Woolly',
+    fullplot: `A rich young Easterner who has always wanted to live in "the Wild West" plans to move to a Western town. Unknown to him, the town's "wild" days are long gone, and it is an orderly, civilized place now. The townsmen, not wanting to lose a rich potential resident, contrive to make over the town to suit the young man's fantasy.`,
+    directors: [ 'John Emerson' ],
+    year: 1917
+  },
+  {
+    plot: 'A tipsy doctor encounters his patient sleepwalking on a building ledge, high above the street.',
+    genres: [ 'Comedy', 'Short' ],
+    title: 'High and Dizzy',
+    fullplot: 'After a long wait, a young doctor finally has a patient come to his office. She is a young woman whose father has brought her to be treated for sleep-walking, but the father becomes annoyed with the doctor, and takes his daughter away. Soon afterward, the young doctor shares in a drinking binge with another doctor who has built a still in his office. After a series of misadventures, the two of them wind up in the same hotel where the daughter and her father are staying, leading to some hazardous predicaments.',
+    directors: [ 'Hal Roach' ],
+    year: 1920
+  },
+  {
+    plot: 'A young man, unaccustomed to children, must accompany a young girl on a train trip.',
+    genres: [ 'Comedy', 'Short' ],
+    title: 'Now or Never',
+    fullplot: "Mary is looking after a young child whose parents have little time for her. So, when Mary travels home to meet her childhood sweetheart, she takes the child with her. Meanwhile, her boyfriend has a mishap on the road, and is tricked out of his money by a tramp. When the tramp then hitches a ride on a train, the boyfriend does so as well. At the station, he meets Mary and the child, and they plan to re-board the train together. But difficulties arise when Mary sees her boss boarding the same train - and there is also the problem that her boyfriend doesn't have a ticket.",
+    directors: [ 'Fred C. Newmeyer', 'Hal Roach' ],
+    year: 1921
+  },
+  {
+    plot: 'Salome, the daughter of Herodias, seduces her step-father/uncle Herod, governor of Judea, with a salacious dance. In return, he promises her the head of the prophet John the Baptist.',
+    genres: [ 'Biography', 'Drama', 'History' ],
+    title: 'Salomè',
+    fullplot: 'Salome, the daughter of Herodias, seduces her step-father/uncle Herod, governor of Judea, with a salacious dance. In return, he promises her the head of the prophet John the Baptist.',
+    directors: [ 'Charles Bryant', 'Alla Nazimova' ],
+    year: 1922
+  },
+  {
+    plot: 'A group of bandits stage a brazen train hold-up, only to find a determined posse hot on their heels.',
+    genres: [ 'Short', 'Western' ],
+    title: 'The Great Train Robbery',
+    fullplot: "Among the earliest existing films in American cinema - notable as the first film that presented a narrative story to tell - it depicts a group of cowboy outlaws who hold up a train and rob the passengers. They are then pursued by a Sheriff's posse. Several scenes have color included - all hand tinted.",
+    directors: [ 'Edwin S. Porter' ],
+    year: 1903
+  },
+  {
+    plot: 'Christ takes on the form of a pacifist count to end a senseless war.',
+    genres: [ 'Drama' ],
+    title: 'Civilization',
+    fullplot: 'Allegorical film about peace. A king starts a war, many of the women are against it, people are pressed into service. A count has constructed a submarine and gets the order to sink an ocean liner, that is also carrying - supposedly - ammunition for the enemy. The count refuses to fire the torpedos, and sinks the submarine. He survives, but in a limbo between death and life where he meets Jesus, who takes him over to preach peace. Naturally the king arrests him and sentences him to death for treason, but then Jesus shows him the real face of war.',
+    directors: [
+      'Reginald Barker',
+      'Thomas H. Ince',
+      'Raymond B. West',
+      'Walter Edwards',
+      'David Hartford',
+      'Jay Hunt',
+      'J. Parker Read Jr.'
+    ],
+    year: 1916
+  },
+  {
+    plot: "Gwen's family is rich, but her parents ignore her and most of the servants push her around, so she is lonely and unhappy. Her father is concerned only with making money, and her mother ...",
+    genres: [ 'Comedy', 'Drama', 'Family' ],
+    title: 'The Poor Little Rich Girl',
+    fullplot: "Gwen's family is rich, but her parents ignore her and most of the servants push her around, so she is lonely and unhappy. Her father is concerned only with making money, and her mother cares only about her social position. But one day a servant's irresponsibility creates a crisis that causes everyone to rethink what is important to them.",
+    directors: [ 'Maurice Tourneur' ],
+    year: 1917
+  },
+  {
+    plot: 'Two peasant children, Mytyl and Tyltyl, are led by Berylune, a fairy, to search for the Blue Bird of Happiness. Berylune gives Tyltyl a cap with a diamond setting, and when Tyltyl turns the...',
+    genres: [ 'Fantasy' ],
+    title: 'The Blue Bird',
+    fullplot: 'Two peasant children, Mytyl and Tyltyl, are led by Berylune, a fairy, to search for the Blue Bird of Happiness. Berylune gives Tyltyl a cap with a diamond setting, and when Tyltyl turns the diamond, the children become aware of and conversant with the souls of a Dog and Cat, as well as of Fire, Water, Bread, Light, and other presumably inanimate things. The troupe thus sets off to find the elusive Blue Bird of Happiness.',
+    directors: [ 'Maurice Tourneur' ],
+    year: 1918
+  },
+  {
+    plot: 'A romantic rivalry among members of a secret society becomes even tenser when one of the men is assigned to carry out an assassination.',
+    genres: [ 'Crime', 'Drama', 'Mystery' ],
+    title: 'The Ace of Hearts',
+    fullplot: "A secret society holds a meeting to determine what to do about a powerful and dangerous man whom they have been studying closely for the past three months. They all agree that he deserves to die. Two of the members, Farallone and Forrest, are both in love with Lilith, the group's only female member. But Lilith accepts neither of them, preferring to devote herself to the group's cause. When the group meets again and deals cards to all the members, Forrest draws the ace of hearts, meaning that he will be the one to carry out the assassination. Lilith then suddenly agrees to marry him, in order to give him courage. But after their first night together, both of them begin to feel differently about what they have planned.",
+    directors: [ 'Wallace Worsley' ],
+    year: 1921
+  },
+  {
+    "plot": "An extended family split up in France and Germany find themselves on opposing sides of the battlefield during World War I.",
+    "genres": [ "Drama", "Romance", "War" ],
+    "title": "The Four Horsemen of the Apocalypse",
+    "fullplot": "Julio Madariaga is the Argentine patriarch of a wealthy family. He has two daughters, the elder wed to a Frenchman and the other to a German. He prefers the Frenchman and his family, especially his grandson Julio, causing jealousy from the German and his three sons. When Madariaga dies, the family splits up, each son-in-law returning to his own country. The Frenchman and his own move to Paris, where Julio becomes an artist and has an affair with an unhappily married woman, the lovely Marguerite Laurier. Her husband finds out, but before he can finalize a divorce, World War One rears its head and both sides of the family will endure great suffering in the conflict, especially since they must fight one another on the battlefield.",
+    "directors": [ "Rex Ingram" ],
+    "year": 1921
+  },
+  {
+    plot: 'Peter Pan enters the nursery of the Darling children and, with the help of fairy dust, leads them off to Never Never Land, where they meet the nefarious Captain Hook.',
+    genres: [ 'Adventure', 'Fantasy', 'Family' ],
+    title: 'Peter Pan',
+    fullplot: 'Peter Pan, the kid who doesn't want to grow up, arrives at the Darling home searching for his shadow. He meets the Darling children and takes them to Never-Never Land, where they will fight against Capt. Hook and his pirate ship and crew. At the end the children will be back in their warm beds.',
+    directors: [ 'Herbert Brenon' ],
+    year: 1924
+  },
+  {
+    plot: 'Michael "Beau" Geste leaves England in disgrace and joins the infamous French Foreign Legion. He is reunited with his two brothers in North Africa, where they face greater danger from their...',
+    genres: [ 'Action', 'Adventure', 'Drama' ],
+    title: 'Beau Geste',
+    fullplot: 'Michael "Beau" Geste leaves England in disgrace and joins the infamous French Foreign Legion. He is reunited with his two brothers in North Africa, where they face greater danger from their own sadistic commander than from the rebellious Arabs.',
+    directors: [ 'Herbert Brenon' ],
+    year: 1926
+  },
+  {
+    plot: 'A salesgirl with plenty of "it" (sex appeal) pursues a handsome playboy.',
+    genres: [ 'Comedy', 'Romance' ],
+    title: 'It',
+    fullplot: "Shopgirl Betty Lou has designs on Cyrus Waltham, the handsome owner of the department store where she works. Waltham, though, doesn't even know Betty Lou is around. In hopes of attracting Waltham's attention, she accepts a date with his best friend, Monty, under the condition that they dine at the Ritz, where Waltham also has a dinner date that evening. Her plan works and in no time at all she and Waltham are contemplating marriage. The romance cools when a newspaper reporter mistakenly writes a story depicting Betty Lou as an unwed mother.",
+    directors: [ 'Clarence G. Badger', 'Josef von Sternberg' ],
+    year: 1927
+  },
+  {
+    plot: 'The misadventures of Buster in three separate historical periods.',
+    genres: [ 'Comedy' ],
+    title: 'Three Ages',
+    fullplot: 'In his first independently produced feature film Buster tells of love and romance through three historical ages: the Stone Age, the Roman Age, and the Modern Age.',
+    directors: [ 'Edward F. Cline', 'Buster Keaton' ],
+    year: 1923
+  },
+  {
+    plot: 'Springfield, Illinois. Brandon, a surveyor, dreams of building a railway to the west, but Marsh, a contractor, is sceptical. Abraham Lincoln looks on as their children, Davy Brandon and ...',
+    genres: [ 'Western' ],
+    title: 'The Iron Horse',
+    fullplot: "Springfield, Illinois. Brandon, a surveyor, dreams of building a railway to the west, but Marsh, a contractor, is sceptical. Abraham Lincoln looks on as their children, Davy Brandon and Miriam Marsh, play together. Brandon sets off with Davy to survey a route. They discover a new pass which will shave 200 miles off the expected distance, but they are set upon by a party of Cheyenne. One of them, a white renegade with only two fingers on his right hand, kills Brandon and scalps him. Davy buries his father... Years pass. It is 1862 and Lincoln signs the bill authorizing construction of the Union Pacific and Central Pacific railways. Marsh is principal contractor and Miriam is engaged to Jesson, the chief engineer... Crews of Chinese, Italians, and Irish work to build the railway while resisting Indian attack. When the pay train is delayed by Indian ambush, the Italians go on strike. Miriam persuades them to return to work... Marsh needs to find a shortcut through the Black Hills. To finish on time, he needs to shorten the route by 200 miles. Bauman, the biggest land owner, wants the route to stay the same - through his land. Marsh has entrusted Jesson with finding the new route. Bauman has Ruby, a saloon girl, persuade Jesson to do otherwise... Davy, now a pony express rider, recalls his father's discovery. He sets off to find the pass. He goes alone, except for Jesson...",
+    directors: [ 'John Ford' ],
+    year: 1924
+  },
+  {
+    plot: 'A recalcitrant thief vies with a duplicitous Mongol ruler for the hand of a beautiful princess.',
+    genres: [ 'Adventure', 'Family', 'Fantasy' ],
+    title: 'The Thief of Bagdad',
+    fullplot: "A thief falls in love with the Caliph of Bagdad's daughter. The Caliph will give her hand to the suitor that brings back the rarest treasure after seven moons. The thief sets off on a magical journey while, unbeknownst to him, another suitor, the Prince of the Mongols, is not playing by the rules...",
+    directors: [ 'Raoul Walsh' ],
+    year: 1924
+  },
+  {
+    plot: 'The son of the sheik and a dancing girl fall in love, but when he is made to believe she has betrayed him he seeks revenge.',
+    genres: [ 'Adventure', 'Drama' ],
+    title: 'The Son of the Sheik',
+    fullplot: "Men and women, fathers and children. Ahmed, son of Diana and Sheik Ahmed Ben Hassan, falls in love with Yasmin, a dancing girl who fronts her father's gang of mountebanks. Among the cutthroats is Ghobah, a villainous Moor to whom Yasmin is promised. In ruins near Touggourt, the city where Yasmin dances, she and Ahmed meet secretly until one night when her father and the gang capture the son of the sheik, torture him, and hold him for ransom. Will Ahmed believe that Yasmin set him up for capture? Even if true love finds a way through webs of deceit, what will the vigorous and imposing sheik say about his son consorting with a dancing girl?",
+    directors: [ 'George Fitzmaurice' ],
+    year: 1926
+  },
+  {
+    plot: 'A meek Belgian soldier (Harry Langdon) fighting in World War I receives penpal letters and a photo from "Mary Brown", an American girl he has never met. He becomes infatuated with her by ...',
+    genres: [ 'Comedy' ],
+    title: 'The Strong Man',
+    fullplot: 'A meek Belgian soldier (Harry Langdon) fighting in World War I receives penpal letters and a photo from "Mary Brown", an American girl he has never met. He becomes infatuated with her by long distance. After the war, the young Belgian journeys to America as assistant to a theatrical "strong man", Zandow the Great (Arthur Thalasso). While in America, he searches for Mary Brown... and he finds her, just as word comes that Zandow is incapacitated and the little nebbish must go on stage in his place.',
+    directors: [ 'Frank Capra' ],
+    year: 1926
+  },
+  {
+    plot: 'Two young men, one rich, one middle class, who are in love with the same woman, become fighter pilots in World War I.',
+    genres: [ 'Drama', 'Romance', 'War' ],
+    title: 'Wings',
+    fullplot: 'Two young men fall in love with the same same girl. After the US enters WWI, both join the Air Corps and become aces. They remain friends, but the relation to the girl threatens their friendship.',
+    directors: [ 'William A. Wellman', "Harry d'Abbadie d'Arrast" ],
+    year: 1927
+  },
+  {
+    plot: 'A professional clown and a self-indulgent count learn to help each other with their problems, but then become romantic rivals.',
+    genres: [ 'Drama' ],
+    title: 'Laugh, Clown, Laugh',
+    fullplot: 'As professional clowns Tito and Simon are traveling, they happen upon an abandoned child, whom they take in and name Simonetta. When Simonetta is older, she becomes a circus performer herself. One day she is looking for roses, and climbs into the garden of Count Luigi Ravelli. The count becomes infatuated with her, but she leaves as soon as possible. Sometime later, Ravelli consults a doctor about his fits of uncontrollable laughter, and there he meets Tito, who has come to seek help for his fits of uncontrollable weeping. The two decide to help each other, and they establish a friendship, but problems arise when they realize that they are both in love with Simonetta.',
+    directors: [ 'Herbert Brenon' ],
+    year: 1928
+  },
+  {
+    plot: 'A nobleman becomes the vigilante Robin Hood who protects the oppressed English people from the tyrannical Prince John.',
+    genres: [ 'Adventure', 'Romance', 'Family' ],
+    title: 'Robin Hood',
+    fullplot: "Amid big-budget medieval pageantry, King Richard goes on the Crusades leaving his brother Prince John as regent, who promptly emerges as a cruel, grasping, treacherous tyrant. Apprised of England's peril by message from his lady-love Marian, the dashing Earl of Huntingdon endangers his life and honor by returning to oppose John, but finds himself and his friends outlawed, and Marian apparently dead. Enter Robin Hood, acrobatic champion of the oppressed, laboring to set things right through swash buckling feats and cliffhanging perils!",
+    directors: [ 'Allan Dwan' ],
+    year: 1922
+  },
+  {
+    plot: "Millie Stope lives with her grandfather on a remote island. Her grandfather fled there for political reasons. But they're not alone. An escaped prisoner, Nicholas, is terrorizing them, and ...",
+    genres: [ 'Drama', 'Romance' ],
+    title: 'Wild Oranges',
+    fullplot: "Millie Stope lives with her grandfather on a remote island. Her grandfather fled there for political reasons. But they're not alone. An escaped prisoner, Nicholas, is terrorizing them, and further more, he's interested in Mllie. John Woolfolk has lost his wife in an accident and tries to forget by sailing in his yacht aimlessly on the ocean. By chance he drops anchor in a bay of that island. He soon finds out that something is wrong on that island, and furthermore, he falls in love with Millie, who sees in him a chance to get off that island. But Nicholas has threatened her with rape and murder if she tries to escape, and he has found out about her plans...",
+    directors: [ 'King Vidor' ],
+    year: 1924
+  },
+  {
+    plot: 'A fire in the mountains drive a wolf pack into the nearby desert where they terrorize the local residents. The leader of the wolf pack is Lobo, actually a halfbreed (Rin Tin Tin). When the ...',
+    genres: [ 'Adventure', 'Romance', 'Western' ],
+    title: 'Clash of the Wolves',
+    fullplot: 'A fire in the mountains drive a wolf pack into the nearby desert where they terrorize the local residents. The leader of the wolf pack is Lobo, actually a halfbreed (Rin Tin Tin). When the pack is discovered hunting a herd of cows, a posse gives chase. Lobo leaves his pack to lead the posse away. He is injured and found by a local prospector, Dave Weston (Charles Farrell). The prospector nurses Lobo back to health and the two become close friends. Meanwhile, Weston has made a Borax find in the area. His girl friend May Barstowe (June Marlowe), daughter of a wealthy rancher, is pleased. However the local chemist, Borax Horton (Pat Hartigan), actually a claim jumper, plans to steal the claim. In a sandstorm he is able to shoot Weston and leave the prospector for dead in the desert. Lobo tries to get a message to May, but runs afoul of Horton. Finally, he is able to bring May to Weston, who are then both terrorized by Horton. Lobo calls upon his pack to eliminate the menace, allowing for the young lovers to finally find happiness. Lobo also finds happiness being reunited with his mate, Nannette.',
+    directors: [ 'Noel M. Smith' ],
+    year: 1925
+  },
+  {
+    plot: "Seeking revenge, an athletic young man joins the pirate band responsible for his father's death.",
+    genres: [ 'Adventure', 'Action' ],
+    title: 'The Black Pirate',
+    fullplot: 'A nobleman vows to avenge the death of his father at the hands of pirates. To this end he infiltrates the pirate band. Acting in character he is instrumental in the capture of a ship, but things are complicated when he finds that there is a young woman on board whom he wishes to protect from the threat of rape.',
+    directors: [ 'Albert Parker' ],
+    year: 1926
+  },
+  {
+    plot: 'Poor Ella Cinders is much abused by her evil step-mother and step-sisters. When she wins a local beauty contest she jumps at the chance to get out of her dead-end life and go to Hollywood, ...',
+    genres: [ 'Comedy', 'Romance' ],
+    title: 'Ella Cinders',
+    fullplot: 'Poor Ella Cinders is much abused by her evil step-mother and step-sisters. When she wins a local beauty contest she jumps at the chance to get out of her dead-end life and go to Hollywood, where she is promised a job in the movies. When she arrives in Hollywood, she discoves that the contest was a scam and the job non-existant. But through pluck, luck, and talent, she makes it in the movies anyway, and finds true love.',
+    directors: [ 'Alfred E. Green' ],
+    year: 1926
+  },
+  {
+    plot: "A film about the French Field Marshal's youth and early military career.",
+    genres: [ 'Biography', 'Drama', 'History' ],
+    title: 'Napoleon',
+    fullplot: "A massive six-hour biopic of Napoleon, tracing his career from his schooldays (where a snowball fight is staged like a military campaign), his flight from Corsica, through the French Revolution (where a real storm is intercut with a political storm) and the Terror, culminating in his triumphant invasion of Italy in 1797 (the film stops there because it was intended to be part one of six, but director Abel Gance never raised the money to make the other five). The film's legendary reputation is due to the astonishing range of techniques that Gance uses to tell his story, culminating in the final twenty-minute triptych sequence, which alternates widescreen panoramas with complex multiple- image montages projected simultaneously on three screens.",
+    directors: [ 'Abel Gance' ],
+    year: 1927
+  },
+  {
+    plot: 'Among the residents of a theatrical boarding house is the last member of a once great acting family, down on his luck. When an offer to star in a London "Hamlet" comes, he takes lessons ...',
+    genres: [ 'Comedy', 'Drama' ],
+    title: 'Upstream',
+    fullplot: 'Among the residents of a theatrical boarding house is the last member of a once great acting family, down on his luck. When an offer to star in a London "Hamlet" comes, he takes lessons from a faded former star, and goes on to huge success as he forgets his old friends.',
+    directors: [ 'John Ford' ],
+    year: 1927
+  },
+  {
+    plot: 'A kept woman runs into her one-time fiancè and finds herself torn between love and comfort.',
+    genres: [ 'Drama', 'Romance' ],
+    title: 'A Woman of Paris: A Drama of Fate',
+    fullplot: 'Marie St. Clair believes she has been jilted by her artist fiance Jean when he fails to meet her at the railway station. She goes off to Paris alone. A year later, mistress of wealthy Pierre Revel, she meets Jean again. Misinterpreting events she bounces back and forth between apparent security and true love.',
+    directors: [ 'Charles Chaplin' ],
+    year: 1923
+  },
+  {
+    plot: 'A bitter clown endeavors to rescue the young woman he loves from the lecherous count who once betrayed him.',
+    genres: [ 'Drama', 'Romance', 'Thriller' ],
+    title: 'He Who Gets Slapped',
+    fullplot: 'Story of an inventor who, suffering betrayal in life, makes a career of it by becoming a clown whose act consists of getting slapped by all the other clowns. He falls in love with another circus performer, and those who betrayed him enter his life yet again.',
+    directors: [ 'Victor Sjèstrèm' ],
+    year: 1924
+  },
+  {
+    plot: 'In Paris a wild girl becomes possessed by the soul of her twin who died to save her life.',
+    genres: [ 'Drama' ],
+    title: 'White Shadows',
+    fullplot: 'In Paris a wild girl becomes possessed by the soul of her twin who died to save her life.',
+    directors: [ 'Graham Cutts' ],
+    year: 1924
+  },
+  {
+    plot: 'The struggles of a hardscrabble Iranian nomadic tribe as they journey through bleak country to reach the grasslands that will save their livestock.',
+    genres: [ 'Documentary' ],
+    title: "Grass: A Nation's Battle for Life",
+    fullplot: 'The real-life struggles of the Bakhtiari tribe of Southern Persia (Iran) to migrate with 50,000 people and ten times as much livestock over seemingly impassable natural barriers of mountain and river during harsh weather conditions to reach grazing lands for their cattle and other livestock. Their hardscrabble life is portrayed with poetically beautiful cinematography in possibly the greatest documentary of the silent era.',
+    directors: [ 'Merian C. Cooper', 'Ernest B. Schoedsack' ],
+    year: 1925
+  },
+  {
+    plot: 'Mrs Erlynne, the mother of Lady Windermere - her daughter does not know about her - wants to be introduced in society, so that she can marry Lord Augustus Lorton. Lord Windermere, who ...',
+    genres: [ 'Comedy' ],
+    title: "Lady Windermere's Fan",
+    fullplot: 'Mrs Erlynne, the mother of Lady Windermere - her daughter does not know about her - wants to be introduced in society, so that she can marry Lord Augustus Lorton. Lord Windermere, who helped her with a cheque, invites her to his wifes birthday-party, but Lady Windermere thinks, she has reason to be jealous, so she decides to leave her husband and go to Lord Darlington, who is pining for her. Mrs Erlynne finds this out and tries to prevent her of this mistake, but her daughter leaves her fan in Lord Darlingtons residence.',
+    directors: [ 'Ernst Lubitsch' ],
+    year: 1925
+  },
+  {
+    plot: 'An irresponsible young millionaire changes his tune when he falls for the daughter of a downtown minister.',
+    genres: [ 'Action', 'Comedy', 'Romance' ],
+    title: "For Heaven's Sake",
+    fullplot: "The Uptown Boy, J. Harold Manners (Lloyd) is a millionaire playboy who falls for the Downtown Girl, Hope (Ralston) who works in Brother Paul's (Weigel) mission. In order to build up attendance, and win Hope's attention, Harold runs through town causing trouble, and winds up with a crowd chasing him right into the mission. He eventually wins the girl and they marry, but not without some interference from his high-brow friends.",
+    directors: [ 'Sam Taylor' ],
+    year: 1926
+  },
+  {
+    plot: "A family saga in which three of a Bavarian widow's sons go to war for Germany and the fourth goes to America, Germany's eventual opponent.",
+    genres: [ 'Drama', 'War' ],
+    title: 'Four Sons',
+    fullplot: `In Burgendorf, Bavaria, Mother Bernle has four sons. Franz is in the army, Johann works at the forge, Andreas tends the sheep. Joseph is riding a hay wagon with a pretty girl when some of the hay falls off, landing on the fearsome Maj. Von Stomm. Joseph gets a slap from the major... The jovial postman has brought a letter from America. Joseph has the offer of a job in the States. But getting there is so expensive... It's Mother Bernle's birthday and most of the town gathers for the dancing. Mother gives Joseph the money she has secreted away. He leaves for the USA... It is "Der Tag", The Day when war is declared. Franz and Johann are excited about their new uniforms. But America is still neutral. Joseph runs the German-American Delicatessen with his new wife Annabelle. The reports of the first German battles with the Russians are good. So why does the postman carry a black-edged letter for Mother Bernle? When America does enter the war, Joseph enlists and meets his friend, the iceman from the deli... Times are very bad in Burgendorf. Von Stomm accuses Mother Bernle: she is the "mother of a traitor"...`,
+    directors: [ 'John Ford' ],
+    year: 1928
+  },
+  {
+    plot: 'In 1918 a simple Mongolian herdsman escapes to the hills after brawling with a western capitalist fur trader who cheats him. In 1920 he helps the partisans fight for the Soviets against the...',
+    genres: [ 'Drama', 'History', 'War' ],
+    title: 'Storm Over Asia',
+    fullplot: 'In 1918 a simple Mongolian herdsman escapes to the hills after brawling with a western capitalist fur trader who cheats him. In 1920 he helps the partisans fight for the Soviets against the occupying army. However he is captured when the army tries to requisition cattle from the herdsmen at the same time as the commandant meets with the reincarnated Grand Lama. After being shot, the army discovers an amulet that suggests he was a direct descendant of Genghis Khan. They find him still alive, so the army restores his health and plans to use him as the head of a Mongolian puppet regime.',
+    directors: [ 'Vsevolod Pudovkin' ],
+    year: 1928
+  },
+  {
+    plot: 'Mickey Mouse, piloting a steamboat, delights his passenger, Minnie, by making musical instruments out of the menagerie on deck.',
+    genres: [ 'Animation', 'Family', 'Comedy' ],
+    title: 'Steamboat Willie',
+    fullplot: `Mickey is piloting a steamboat when Captain Pete comes to the bridge and throws him off. They stop to pick up cargo. Minnie just misses the boat and Mickey uses the crane to grab her. She drops her sheet music of "Turkey in the Straw" and a goat eats it. With help from Mickey, she cranks the goat's tail, and it plays the tune. Mickey accompanies on percussion and by torturing various animals, until Pete comes down and puts a stop to it, putting Mickey to work peeling potatoes. While this is the first sound Mickey Mouse, there's no dialog.`,
+    directors: [ 'Ub Iwerks', 'Walt Disney' ],
+    year: 1928
+  },
+  {
+    plot: "Harriet and Queenie Mahoney, a vaudeville act, come to Broadway, where their friend Eddie Kerns needs them for his number in one of Francis Zanfield's shows. Eddie was in love with Harriet,...",
+    genres: [ 'Musical', 'Romance' ],
+    title: 'The Broadway Melody',
+    fullplot: "Harriet and Queenie Mahoney, a vaudeville act, come to Broadway, where their friend Eddie Kerns needs them for his number in one of Francis Zanfield's shows. Eddie was in love with Harriet, but when he meets Queenie, he falls in love to her, but she is courted by Jock Warriner, a member of the New Yorker high society. It takes a while till Queenie recognizes, that she is for Jock nothing more than a toy, and it also takes a while till Harriet recognizes, that Eddie is in love with Queenie.",
+    directors: [ 'Harry Beaumont' ],
+    year: 1929
+  },
+  {
+    plot: 'A convent girl is abducted and seduced by a prince before being sent off to a brothel in East Africa.',
+    genres: [ 'Drama' ],
+    title: 'Queen Kelly',
+    fullplot: "Prince Wolfram is the betrothed of mad Queen Regina V of Kronberg. Supreme ruler, her word is law and he is a playboy. On maneuvers as punishment for partying with other women, he sees Kelly walking the the other students of a convent. He is intrigued by her beauty and wants her. He kidnaps her that night from the convent and takes her to his room and professes his love for her. When the Queen finds them together the next morning , she whips Kelly and throws her out of the castle. Regina then puts Wolfram into prison for not wanting to marry the Queen. Kelly goes to German East Africa to visit her dying Aunt and is forced to marry the disgusting Jan. The Aunt dies after the wedding and Kelly refuses to live with Jan and becomes the head of Aunties Brothel. Her extravagances and style earn her the name 'Queen Kelly' and Prince Wolfram does not marry Queen Regina V.",
+    directors: [
+      'Erich von Stroheim',
+      'Richard Boleslawski',
+      'Edmund Goulding',
+      'Irving Thalberg',
+      'Sam Wood'
+    ],
+    year: 1929
+  },
+  {
+    plot: "A convict falls in love with his new cellmate's sister, only to become embroiled in a planned break-out which is certain to have lethal consequences.",
+    genres: [ 'Drama', 'Romance', 'Thriller' ],
+    title: 'The Big House',
+    fullplot: "After a manslaughter conviction from drunk driving, nice but foolish Kent is sent to a prison over-crowded and unable to properly deal with it's inmates. There he meets veteran criminals like Morgan and his hardened pal Butch. And the system punishes them all, turning them against each other and bringing out the worst.",
+    directors: [ 'George W. Hill', 'Ward Wing' ],
+    year: 1930
+  },
+  {
+    plot: 'Young Harry is in love and wants to marry an actress, much to the displeasure of his family. Harry thinks that Bishop Armstrong knows nothing about love so Armstrong tells him the story of ...',
+    genres: [ 'Drama', 'Romance' ],
+    title: 'Romance',
+    fullplot: `Young Harry is in love and wants to marry an actress, much to the displeasure of his family. Harry thinks that Bishop Armstrong knows nothing about love so Armstrong tells him the story of Rita and himself. Rita was an Opera Star singing in New York who was at a party given by Cornelius. Armstrong was a 28 year old rector. He fell for Rita when he saw her and after six weeks he wanted to marry her. Naive as he was, he thought that all of Rita's "relationships" were in the distant past, but Rita lives for the moment and knows that she can never marry Armstrong.`,
+    directors: [ 'Clarence Brown' ],
+    year: 1930
+  },
+  {
+    plot: 'A burlesque star seeks to keep her convent-raised daughter away from her low-down life and abusive lover/stage manager.',
+    genres: [ 'Drama', 'Musical' ],
+    title: 'Applause',
+    fullplot: `This early example of the "backstage" musical genre tells the story of Kitty Darling, a fading burlesque star who tries to save her convent-educated daughter April from following in Mom's footsteps.`,
+    directors: [ 'Rouben Mamoulian' ],
+    year: 1929
+  },
+  {
+    plot: 'Prime Minister of Great Britain Benjamin Disraeli outwits the subterfuge of the Russians and chicanery at home in order to secure the purchase of the Suez Canal.',
+    genres: [ 'Biography', 'Drama', 'History' ],
+    title: 'Disraeli',
+    fullplot: "Biopic of the famed British Prime Minister focusing on his concern about Russia's growing interest in the Indian subcontinent and his attempts to buy the Suez Canal. He sees the Canal as the key strategic resource in maintaining the Empire in the East but is unpopular in many quarters. With antisemitism rife at the time, Disraeli finds little support for his plan to purchase the canal or his foreign policy in general. There is no doubt that the Russians are plotting against British interests and he is surrounded by spies, even in his office at 10 Downing St. When the Bank of England refuses to finance the purchase of the available shares he turns to private sources to raise the available cash only to find the conspirators one step ahead of him.",
+    directors: [ 'Alfred E. Green' ],
+    year: 1929
+  },
+  {
+    plot: "In a juke joint, sharecropper Zeke falls for a beautiful dancer, Chick, but she's only setting him up for a rigged craps game. He loses $100, the money he got for the sale of his family's ...",
+    genres: [ 'Drama', 'Musical' ],
+    title: 'Hallelujah',
+    fullplot: "In a juke joint, sharecropper Zeke falls for a beautiful dancer, Chick, but she's only setting him up for a rigged craps game. He loses $100, the money he got for the sale of his family's entire cotton crop. His brother Spunk is mortally wounded in the shoot-out which follows. Zeke goes away but returns as Brother Zekiel the preacher. His forceful preaching draws the faithful in large numbers. Even Chick wants to be saved. Zekiel has asked the pretty Missy Rose to marry him, but Chick can still cast a spell over the preacher...",
+    directors: [ 'King Vidor' ],
+    year: 1929
+  },
+  {
+    genres: [ 'Drama' ],
+    title: 'David Golder',
+    directors: [ 'Julien Duvivier' ],
+    year: 1931
+  },
+  {
+    plot: 'A cabaret singer and a Legionnaire fall in love, but their relationship is complicated by the results of his womanizing and due to the appearance of a rich man who wants her for himself.',
+    genres: [ 'Romance', 'Drama' ],
+    title: 'Morocco',
+    fullplot: "The Foreign Legion marches in to Mogador with booze and women in mind just as singer Amy Jolly arrives from Paris to work at Lo Tinto's cabaret. That night, insouciant legionnaire Tom Brown catches her inimitably seductive, tuxedo-clad act. Both bruised by their past lives, the two edge cautiously into a no-strings relationship while being pursued by others. But Tom must leave on a perilous mission: is it too late for them?",
+    directors: [ 'Josef von Sternberg' ],
+    year: 1930
+  },
+  {
+    plot: 'A woman on the run from the law finds her past catching up to her just as she is on the verge of true happiness.',
+    genres: [ 'Drama' ],
+    title: 'Street Angel',
+    fullplot: "In Naples, where prostitutes can pay their rent, Angela is sentenced to a year in the workhouse when she tries to steal(while streetwalking) to pay for medicine for her dying mother. She escapes and is hidden by a circus, where she's a natural talent and meets Gino, a painter. When she breaks her ankle in a fall, her career ends. What can she and Gino do? He wants to go to Naples, but the law may still be looking for her, and Gino doesn't know about her past. Starving artist and a beauty with a secret: is there room in this world for them?",
+    directors: [ 'Frank Borzage' ],
+    year: 1928
+  },
+  {
+    plot: 'A young impoverished aristocrat falls in love with an inn-keepers daughter, but has to marry money.',
+    genres: [ 'Drama' ],
+    title: 'The Wedding March',
+    fullplot: "Prince Nikki, Lieutenant of the Guard in pre WWI Vienna, is flat broke, but the only advice he gets from his parents is either to shoot himself or to marry money. During the Chorpus Christi parade his horse accidentaly hurts poor Mitzi, the daughter of inn-keepers in a Viennese suburb, who is, according to the wishes of her parents, going to marry the butcher Schani. When Nikki visits her at the hospital, they fall in love, much to the dislike of her parents and Schani. Nikki's parents, meanwhile have arranged a prospective marriage with Cecilia, the limping daughter of a very rich non-aristocratic industrial. Due to the fact, that Nikki's father is a general in the Austrian-Hungarian Army, resitance is useless. When Mitzi, after hearing of it, is still refusing Schani's proposal, he vowes to shoot Nikki when he leaves the church.",
+    directors: [ 'Erich von Stroheim' ],
+    year: 1928
+  },
+  {
+    plot: 'Spendthrift Willie Leyland again returns to the family home in London penniless. His father is none too pleased but Willie smooth-talks him into letting him stay. At the same time he turns ...',
+    genres: [ 'Comedy', 'Romance' ],
+    title: 'The Devil to Pay!',
+    fullplot: "Spendthrift Willie Leyland again returns to the family home in London penniless. His father is none too pleased but Willie smooth-talks him into letting him stay. At the same time he turns the charm on Dorothy Hope, whose father is big in linoleum and who, before Willie's arrival, was about to become engaged to a Russian aristocrat.",
+    directors: [ 'George Fitzmaurice' ],
+    year: 1930
+  },
+  {
+    plot: "This revue presents its numbers around the orchestra leader Paul Whiteman, besides that it shows in it's final number that the European popular music are the roots of American popular music...",
+    genres: [ 'Animation', 'Music' ],
+    title: 'King of Jazz',
+    fullplot: "This revue presents its numbers around the orchestra leader Paul Whiteman, besides that it shows in it's final number that the European popular music are the roots of American popular music, called Jazz.",
+    directors: [ 'John Murray Anderson', 'Pèl Fejès' ],
+    year: 1930
+  },
+  {
+    plot: "Rico is a small-time hood who knocks off gas stations for whatever he can take. He heads east and signs up with Sam Vettori's mob. A New Year's Eve robbery at Little Arnie Lorch's casino ...",
+    genres: [ 'Crime', 'Drama', 'Film-Noir' ],
+    title: 'Little Caesar',
+    fullplot: "Rico is a small-time hood who knocks off gas stations for whatever he can take. He heads east and signs up with Sam Vettori's mob. A New Year's Eve robbery at Little Arnie Lorch's casino results in the death of the new crime commissioner Alvin McClure. Rico's good friend Joe Massara, who works at the club as a professional dancer, works as the gang's lookout man and wants out of the gang. Rico is ambitious and eventually takes over Vettori's gang; he then moves up to the next echelon pushing out Diamond Pete Montana. When he orders Joe to dump his girlfriend Olga and re-join the gang, Olga decides there's only one way out for them.",
+    directors: [ 'Mervyn LeRoy' ],
+    year: 1931
+  },
+  {
+    plot: 'Navy divers clear the torpedo tube of a sunken submarine.',
+    genres: [ 'Action', 'Drama' ],
+    title: 'Men Without Women',
+    fullplot: 'Aboard the U.S. submarine S13 in the China seas, Chief Torpedoman Burke goes about his duties. In actuality, he is Quartermaine, the infamous former commander of the British ship Royal Scot, which was sunk by Germans with a Field Marshal aboard. Quartermaine had told his sweetheart that the Field Marshal would be aboard, not knowing that she was an informant for the enemy. When the S13 sinks, Burke takes charge when the commander, Ensign Price, is unable to command. Burke must keep his mates alive long enough on the bottom of the sea for rescuers to arrive.',
+    directors: [ 'John Ford' ],
+    year: 1930
+  },
+  {
+    plot: 'In the peaceful countryside, Vassily opposes the rich kulaks over the coming of collective farming.',
+    genres: [ 'Drama' ],
+    title: 'Earth',
+    fullplot: `Dovzhenko's "film poem" style brings to life the collective experience of life for the Ukranian proles, examining natural cycles through his epic montage. He explores life, death, violence, sex, and other issues as they relate to the collective farms. An idealistic vision of the possibilities of Communism made just before Stalinism set in and the Kulack class was liquidated, "Earth" was viewed negatively by many Soviets because of its exploration of death and other dark issues that come with revolution.`,
+    directors: [ 'Aleksandr Dovzhenko' ],
+    year: 1930
+  },
+  {
+    plot: 'A newspaper editor settles in an Oklahoma boom town with his reluctant wife at the end of the nineteenth century.',
+    genres: [ 'Drama', 'Western' ],
+    title: 'Cimarron',
+    fullplot: 'When the government opens up the Oklahoma territory for settlement, restless Yancey Cravat claims a plot of the free land for himself and moves his family there from Wichita. A newspaperman, lawyer, and just about everything else, Cravat soon becomes a leading citizen of the boom town of Osage. Once the town is established, however, he begins to feel confined once again, and heads for the Cherokee Strip, leaving his family behind. During this and other absences, his wife Sabra must learn to take care of herself and soon becomes prominent in her own right.',
+    directors: [ 'Wesley Ruggles' ],
+    year: 1931
+  },
+  {
+    plot: "Joe May's sensual drama of life in the Berlin underworld is in many ways the perfect summation of German filmmaking in the silent era: a dazzling visual style, a psychological approach to ...",
+    genres: [ 'Drama' ],
+    title: 'Asphalt',
+    fullplot: "Joe May's sensual drama of life in the Berlin underworld is in many ways the perfect summation of German filmmaking in the silent era: a dazzling visual style, a psychological approach to its characters, and the ability to take a simple and essentially melodramatic story and turn it into something more complex and inherently cinematic.",
+    directors: [ 'Joe May' ],
+    year: 1929
+  },
+  {
+    plot: 'A charming, happy-go-lucky bandit in old Arizona plays cat-and-mouse with the sheriff trying to catch him while he romances a local beauty.',
+    genres: [ 'Romance', 'Western' ],
+    title: 'In Old Arizona',
+    fullplot: "Army Sergeant Mickey Dunn sets out in pursuit of the Cisco Kid, a notorious if kind-hearted and charismatic bandit of the Old West. The Kid spends much of his loot on Tonia, the woman he loves, not realizing that she is being unfaithful to him in his absence. Soon, with her oblivious paramour off plying his trade, Tonia falls in with Dunn, drawn by the allure of a substantial reward for the Kid's capture -- dead or alive. Together, they concoct a plan to ambush and do away with the Cisco Kid once and for all.",
+    directors: [ 'Irving Cummings' ],
+    year: 1928
+  },
+  {
+    plot: 'Breck Coleman leads hundreds of settlers in covered wagons from the Mississippi River to their destiny out West.',
+    genres: [ 'Adventure', 'Western', 'Romance' ],
+    title: 'The Big Trail',
+    directors: [ 'Raoul Walsh', 'Louis R. Loeffler' ],
+    year: 1930
+  },
+  {
+    plot: 'When a woman discovers that her husband has been unfaithful to her, she decides to respond to his infidelities in kind.',
+    genres: [ 'Romance', 'Drama' ],
+    title: 'The Divorcee',
+    fullplot: "Jerry and Ted are young, in love, and part of the New York 'in-crowd'. Jerry's decision to marry Ted crushes a yearning Paul. Distraught Paul gets drunk and wrecks his car, disfiguring young Dorothy's face in the process. Out of pity, Paul marries Dorothy. Years later, the apparent perfect marriage of Ted and Jerry falls apart from infidelity on both sides. Inwardly unhappy, popular Jerry lives a party life while Ted sinks into a life of alcoholism. Jerry then runs into Paul, who still loves her. After spending time together with Jerry, Paul plans to divorce Dorothy. When Jerry sees Dorothy again, she has second thoughts about where her life is heading.",
+    directors: [ 'Robert Z. Leonard' ],
+    year: 1930
+  },
+  {
+    plot: 'A group of German infantrymen of the First World War live out their lives in the trenches of France. They find brief entertainment and relief in a village behind the lines, but primarily ...',
+    genres: [ 'Drama', 'Romance', 'War' ],
+    title: 'Westfront 1918',
+    fullplot: 'A group of German infantrymen of the First World War live out their lives in the trenches of France. They find brief entertainment and relief in a village behind the lines, but primarily terror fills their lives as the attacks on and from the French army ebb and flow. One of the men, Karl, goes home on leave only to discover the degradation forced on his family by wartime poverty. He returns to the lines in time to face an enormous attack by French tanks.',
+    directors: [ 'Georg Wilhelm Pabst' ],
+    year: 1930
+  },
+  {
+    plot: 'A man and woman, skeptical about romance, nonetheless fall in love and are wed, but their lack of confidence in the opposite sex haunts their marriage.',
+    genres: [ 'Drama' ],
+    title: 'Bad Girl',
+    fullplot: "A mug and a jane: Dorothy knows that every guy is going to make a pass at her; Eddie knows that every gal wastes her money on good times. He's saving to open a repair shop. When the two of them meet, they can't believe they get along. One evening he leaves her waiting in the rain; she finds his apartment and reads him the riot act. They end up spooning and napping until 4 AM. She's afraid of her brother, who's her guardian, so Eddie figures she should tell her brother that she's getting married the next morning. Dorothy tries out the story but knows Eddie won't show up. It's the first of a series of promises, fears, miscalculations, and hard knocks. Where will they end up?",
+    directors: [ 'Frank Borzage' ],
+    year: 1931
+  },
+  {
+    plot: `Dink Purcell loves his alcoholic father, ex-heavyweight champion Andy "Champ" Purcell, despite his frequent binges, his frequent gambling and their squalid living conditions. And there's ...`,
+    genres: [ 'Drama', 'Family', 'Sport' ],
+    title: 'The Champ',
+    fullplot: `Dink Purcell loves his alcoholic father, ex-heavyweight champion Andy "Champ" Purcell, despite his frequent binges, his frequent gambling and their squalid living conditions. And there's nothing Andy wouldn't do for Dink. When Andy wins a race horse gambling, he gives it to Dink and they race it at a Tijuana track. There, Dink meets Linda Carleton, a race horse owner herself, and they have an immediate rapport. But Linda's rich husband sees Andy and realizes Dink is Linda's son, who she gave up when she and Andy divorced. Andy is bribed $200 to allow Dink to visit with Linda, but refuses to allow Dink to spend six months with the Carletons. When Andy loses the horse gambling and winds up in jail after a drunken tirade, he realizes Dink's place is with his mother. Dink tearfully goes but sneaks out and returns at his first opportunity, filling a depressed Andy with a desire to make good. So Andy goes into training after his managers arrange a boxing match with the Mexican champion.`,
+    directors: [ 'King Vidor' ],
+    year: 1931
+  },
+  {
+    plot: 'The ancient vampire Count Dracula arrives in England and begins to prey upon the virtuous young Mina.',
+    genres: [ 'Horror' ],
+    title: 'Dracula',
+    fullplot: "After a harrowing ride through the Carpathian mountains in eastern Europe, Renfield enters castle Dracula to finalize the transferral of Carfax Abbey in London to Count Dracula, who is in actuality a vampire. Renfield is drugged by the eerily hypnotic count, and turned into one of his thralls, protecting him during his sea voyage to London. After sucking the blood and turning the young Lucy Weston into a vampire, Dracula turns his attention to her friend Mina Seward, daughter of Dr. Seward who then calls in a specialist, Dr. Van Helsing, to diagnose the sudden deterioration of Mina's health. Van Helsing, realizing that Dracula is indeed a vampire, tries to prepare Mina's fiance, John Harker, and Dr. Seward for what is to come and the measures that will have to be taken to prevent Mina from becoming one of the undead.",
+    directors: [ 'Tod Browning' ],
+    year: 1931
+  },
+  {
+    plot: 'Plea against war and for friendship between peoples, through the story of french miners rescued by german colleagues after a firedamp explosion.',
+    genres: [ 'Drama' ],
+    title: 'Comradeship',
+    fullplot: "A old German mine was split in two after the end of WWI because of the new border. In the Frenchpart a fire breaks out. The German minwers send a rescue group in, helping their French comrades. A group of three old German miners, who where not treaten friendly at a French inn the night before, start their private rescue through an old way, where since 1919 the border is. After all survivors are rescued, there's a big party with speeches about friendship between Frensh and Germans, while border police closes the old way in the mine.",
+    directors: [ 'Georg Wilhelm Pabst' ],
+    year: 1931
+  },
+  {
+    plot: 'In this romance a librarian takes a cruise and falls for an unobtainable man, a district attorney married to a crippled woman.',
+    genres: [ 'Drama', 'Romance' ],
+    title: 'Forbidden',
+    fullplot: "On a cruise to Cuba, Lulu Smith falls in love with Bob Grover. Back home, she breaks off the romance when he tells her he is married. Lulu has a baby, but doesn't tell Bob, who turns out to be a rising politician. She passes herself off as the baby's nanny. When Bob learns what is going on, he adopts the little girl, not telling his wife or anyone else where she came from. Lulu gets a job at a newspaper. Things get complicated when the editor gets the dirt on Grover, but also wants to marry Lulu.",
+    directors: [ 'Frank Capra' ],
+    year: 1932
+  },
+  {
+    genres: [ 'Comedy', 'Musical' ],
+    title: 'The Song of Night',
+    directors: [ 'Anatole Litvak' ],
+    year: 1932
+  },
+  {
+    plot: 'A Parisian tailor finds himself posing as a baron in order to collect a sizeable bill from an aristocrat, only to fall in love with an aloof young princess.',
+    genres: [ 'Comedy', 'Musical', 'Romance' ],
+    title: 'Love Me Tonight',
+    fullplot: 'Maurice Courtelin, a Parisian tailor (Maurice Chevalier), is owed a great sum of money by a viscount (Charles Ruggles). Stalling for time, the titled but penniless nobleman moves Maurice into the family chateau and passes him off as a baron. The beguiling Maurice soon charms the entire aristocratic household, except for the haughty Princess Jeanette (Jeanette MacDonald), who remains suspicious of him. But suspicion eventually gives way to love.',
+    directors: [ 'Rouben Mamoulian' ],
+    year: 1932
+  },
+  {
+    plot: 'Like the legendary Sisyphus, deliverymen Laurel and Hardy struggle to push a large crated piano up a seemingly insurmountable flight of stairs.',
+    genres: [ 'Comedy', 'Short' ],
+    title: 'The Music Box',
+    fullplot: `The Laurel & Hardy Moving Co. have a challenging job on their hands (and backs): hauling a player piano up a monumental flight of stairs to Prof. von Schwarzenhoffen's house. Their task is complicated by a sassy nursemaid and, unbeknownst to them, the impatient Prof. von Schwarzenhoffen himself. But the biggest problem is the force of gravity, which repeatedly pulls the piano back down to the bottom of the stairs. Finally, the irate Professor explodes in fury to discover the "mechanical blunderbuss" in his home, not knowing it was a surprise birthday present from his wife.`,
+    directors: [ 'James Parrott' ],
+    year: 1932
+  },
+  {
+    plot: 'A Vienna based acting couple make magic when they perform together on stage. Unknown to the theater going public and despite being married for only six months, that magic seems no longer to...',
+    genres: [ 'Comedy', 'Drama' ],
+    title: 'The Guardsman',
+    fullplot: "A Vienna based acting couple make magic when they perform together on stage. Unknown to the theater going public and despite being married for only six months, that magic seems no longer to translate to their personal life, where they are constantly arguing, even under their breaths during on-stage curtain calls. These arguments stem from the actress' moody behavior, which the actor believes means that she no longer loves him and that she is looking for another man to replace him in her personal life. He believes she even scans the audience for potential suitors, probably being most attracted to the soldier type. Their feuding is at a point where they take pot shots at each other about everything in their lives, even the quality of the other's acting. The actor may have a valid point as the actress has been receiving bouquets of roses of late and a Russian guardsman has been seen hanging around outside their home. The actor knows these things as he is that Russian guardsman (who is also a Russian prince) in disguise, he who is also sending the flowers as the guardsman. He wants to see if this guardsman can indeed woo his wife away from him, and thus show her for who she really is. He concocts a further scheme to pretend to be out of town for a 24 hour period on another acting engagement, during which time he will try and seduce her as the guardsman. But the actress may throw some wrenches into his plan.",
+    directors: [ 'Sidney Franklin' ],
+    year: 1931
+  },
+  {
+    plot: 'Hildy Johnson, newspaper reporter, is engaged to Peggy Grant and planning to move to New York for a higher paying advertising job. The court press room is full of lame reporters who invent ...',
+    genres: [ 'Comedy' ],
+    title: 'The Front Page',
+    fullplot: "Hildy Johnson, newspaper reporter, is engaged to Peggy Grant and planning to move to New York for a higher paying advertising job. The court press room is full of lame reporters who invent stories as much as write them. All are waiting to cover the hanging of Earl Williams. When Williams escapes from the inept Sheriff, Hildy seizes the opportunity by using his $260 honeymoon money to payoff an insider and get the scoop on the escape. However, Walter Burns, the Post's editor, is slow to repay Hildy back, hoping that he will stay on the story. Getting a major scoop looks possible when Hildy stumbles onto the bewildered escapee and hides him in a roll-top desk in the press room. Burns shows up to help. Can they keep Williams' whereabouts secret long enough to get the scoop, especially with the Sheriff and other reporters hovering around?",
+    directors: [ 'Lewis Milestone' ],
+    year: 1931
+  },
+  {
+    plot: 'Famous motor-racing champion Joe Greer returns to his hometown to compete in a local race. He discovers his younger brother has aspirations to become a racing champion and during the race ...',
+    genres: [ 'Drama', 'Action' ],
+    title: 'The Crowd Roars',
+    fullplot: "Famous motor-racing champion Joe Greer returns to his hometown to compete in a local race. He discovers his younger brother has aspirations to become a racing champion and during the race Joe loses his nerve when another driver his killed, leaving his brother to win. Joe's luck takes a plunge while his brother rises to height of fame.",
+    directors: [ 'Howard Hawks' ],
+    year: 1932
+  },
+  {
+    plot: 'Dr. Jekyll faces horrible consequences when he lets his dark side run wild with a potion that changes him into the animalistic Mr. Hyde.',
+    genres: [ 'Horror', 'Sci-Fi' ],
+    title: 'Dr. Jekyll and Mr. Hyde',
+    fullplot: 'Based on the story by Robert Louis Stevenson, Dr. Henry Jekyll believes that there are two distinct sides to men - a good and an evil side. He believes that by separating the two man can become liberated. He succeeds in his experiments with chemicals to accomplish this and transforms into Hyde to commit horrendous crimes. When he discontinues use of the drug it is already too late...',
+    directors: [ 'Rouben Mamoulian' ],
+    year: 1931
+  },
+  {
+    plot: 'With the aid of a wealthy erratic tippler, a dewy-eyed tramp who has fallen in love with a sightless flower girl accumulates money to be able to help her medically.',
+    genres: [ 'Comedy', 'Drama', 'Romance' ],
+    title: 'City Lights',
+    fullplot: "A tramp falls in love with a beautiful blind girl. Her family is in financial trouble. The tramp's on-and-off friendship with a wealthy man allows him to be the girl's benefactor and suitor.",
+    directors: [ 'Charles Chaplin' ],
+    year: 1931
+  },
+  {
+    plot: 'At an all-girls boarding school, Manuela falls in love with a teacher, to terrific consequences.',
+    genres: [ 'Drama', 'Romance' ],
+    title: 'Mèdchen in Uniform',
+    fullplot: 'German film in which a sensitive girl is sent to an all-girls boarding school and develops a romantic attachment to one of her teachers. One of the earliest narrative films to explicitly portray homosexuality.',
+    directors: [ 'Leontine Sagan', 'Carl Froelich' ],
+    year: 1931
+  },
+  {
+    plot: "A young hoodlum rises up through the ranks of the Chicago underworld, even as a gangster's accidental death threatens to spark a bloody mob war.",
+    genres: [ 'Crime', 'Drama' ],
+    title: 'The Public Enemy',
+    fullplot: "Tom Powers and Matt Doyle are best friends and fellow gangsters, their lives frowned upon by Tom's straight laced brother, Mike, and Matt's straight laced sister, Molly. From their teen-aged years into young adulthood, Tom and Matt have an increasingly lucrative life, bootlegging during the Prohibition era. But Tom in particular becomes more and more brazen in what he is willing to do, and becomes more obstinate and violent against those who either disagree with him or cross him. When one of their colleagues dies in a freak accident, a rival bootlegging faction senses weakness among Tom and Matt's gang, which is led by Paddy Ryan. A gang war ensues, resulting in Paddy suggesting that Tom and Matt lay low. But because of Tom's basic nature, he decides instead to take matters into his own hands.",
+    directors: [ 'William A. Wellman' ],
+    year: 1931
+  },
+  {
+    plot: 'Out of jail for a crime she did not commit, Madelon turns to prostitution and thievery to send her illegitimate son to medical school.',
+    genres: [ 'Drama' ],
+    title: 'The Sin of Madelon Claudet',
+    fullplot: "French country girl Madelon falls for artist Larry, who leaves her after she becomes pregnant. She finds help from jewel thief Carlo, but he commits suicide when the police try to arrest him. Madelon is arrested and receives a ten year term in prison for assisting him in his profession. To support her son, who does not know that she's been in prison, she becomes a street walker, allowing him to attend medical school.",
+    directors: [ 'Edgar Selwyn' ],
+    year: 1931
+  },
+  {
+    plot: "Skippy, the mischievous son of a wealthy doctor, meets Sooky in poverty-ridden Shantytown, and together they try to save Sooky's pet from a cruel dogcatcher.",
+    genres: [ 'Family', 'Drama', 'Comedy' ],
+    title: 'Skippy',
+    fullplot: `Precocious adolescent Skippy Skinner spends most of his time trying to get around doing those things that his parents want him to do (like brush his teeth), while doing those things his parents don't want him to do. Chief among the latter is spending time across the railroad tracks in Shantytown, instead of playing with "clean" neighborhood kids like brother and sister Sidney and Eloise. Skippy's father, Dr. Herbert Skinner, the city's head of the health board, in particular doesn't like Skippy spending time there as Dr. Skinner is a verminophobe, and believes Shantytown is dirty and unhealthy. On Skippy's latest visit to Shantytown when he meets a new friend named Sooky Wayne, he learns that Shantytown is being torn down and its poor residents have to move. And Sooky's mongrel and unlicensed (since Mrs. Wayne can't afford the $3 license fee) dog Penny is captured by the city's dog catcher. As Skippy does whatever he can to raise the $3 to get Penny back for his new friend (which includes breaking into his piggy bank, holding a variety show for the Shantytown kids, and trying to ask his father for the money), Skippy learns that one person seems to be responsible for both these problems in his life, which makes the already tenuous relationship with this person even more tenuous.`,
+    directors: [ 'Norman Taurog' ],
+    year: 1931
+  },
+  {
+    plot: 'A famous left-wing satirical comedy about two ex-convicts, one of whom escaped jail and then worked his way up from salesman to factory owner, where he oversees a highly mechanized ...',
+    genres: [ 'Comedy', 'Musical' ],
+    title: 'è Nous la Libertè',
+    fullplot: 'A famous left-wing satirical comedy about two ex-convicts, one of whom escaped jail and then worked his way up from salesman to factory owner, where he oversees a highly mechanized operation where the workers are reduced to mere automatons. Fearful of being exposed over his past, at first by his friend and later by another gangster, the owner chooses to give his factory to the workers, then escapes with his friend to the freedom of the open road. The production company for "A Nous la Liberte" was for more than a decade embroiled in a lawsuit claiming that Charles Chaplin had seen their film and plagiarized many ideas from it as he developed "Modern Times."',
+    directors: [ 'Renè Clair' ],
+    year: 1931
+  },
+  {
+    plot: 'Junta is hated by the people in the village where she lives, especially by the women, who suspect her of being a witch. Only she can climb the nearby mountains to a cave high up, whence a ...',
+    genres: [ 'Drama', 'Fantasy', 'Mystery' ],
+    title: 'The Blue Light',
+    fullplot: 'Junta is hated by the people in the village where she lives, especially by the women, who suspect her of being a witch. Only she can climb the nearby mountains to a cave high up, whence a mysterious blue light glows when the moon is full. Many young men of the village have died trying to follow her. She is driven out of town, and takes to living in the mountains. Eventually she shares the secret of the blue light with one man, and he betrays it.',
+    directors: [ 'Leni Riefenstahl', 'Bèla Balèzs' ],
+    year: 1932
+  },
+  {
+    plot: 'A young French soldier in World War I is overcome with guilt when he kills a German soldier who, like himself, is a musically gifted conscript, each having attended the same musical ...',
+    genres: [ 'Drama' ],
+    title: 'Broken Lullaby',
+    fullplot: "A young French soldier in World War I is overcome with guilt when he kills a German soldier who, like himself, is a musically gifted conscript, each having attended the same musical conservatory in France. The fact that the incident occurred in war does not assuage his guilt. He travels to Germany to meet the man's family.",
+    directors: [ 'Ernst Lubitsch' ],
+    year: 1932
+  },
+  {
+    plot: 'A group of very different individuals staying at a luxurious hotel in Berlin deal with each of their respective dramas.',
+    genres: [ 'Drama', 'Romance' ],
+    title: 'Grand Hotel',
+    fullplot: `Berlin's plushest, most expensive hotel is the setting where in the words of Dr. Otternschlag "People come, people go. Nothing ever happens.". The doctor is usually drunk so he missed the fact that Baron von Geigern is broke and trying to steal eccentric dancer Grusinskaya's pearls. He ends up stealing her heart instead. Powerful German businessman Preysing brow beats Kringelein, one of his company's lowly bookkeepers but it is the terminally ill Kringelein who holds all the cards in the end. Meanwhile, the Baron also steals the heart of Preysing's mistress, Flaemmchen, but she doesn't end up with either one of them in the end...`,
+    directors: [ 'Edmund Goulding' ],
+    year: 1932
+  },
+  {
+    plot: 'Harold Hall, an accident prone young man with little or no acting ability, desperately wants to be in pictures. After a mix-up with his application photograph, he gets an offer to have a ...',
+    genres: [ 'Comedy', 'Family', 'Romance' ],
+    title: 'Movie Crazy',
+    fullplot: 'Harold Hall, an accident prone young man with little or no acting ability, desperately wants to be in pictures. After a mix-up with his application photograph, he gets an offer to have a screen-test, and goes off to Hollywood. At the studio, he does everything wrong and causes all sorts of trouble. But he catches the fancy of a beautiful actress, and eventually the studio owner recognizes him as a comic genius.',
+    directors: [ 'Clyde Bruckman', 'Harold Lloyd' ],
+    year: 1932
+  },
+  {
+    plot: "Bank clerk William Marble is desperate for money to pay his family's bills. When his wealthy nephew visits, Marble asks him for a loan, but the young man refuses. Marble decides to kill his...",
+    genres: [ 'Crime', 'Drama' ],
+    title: 'Payment Deferred',
+    fullplot: "Bank clerk William Marble is desperate for money to pay his family's bills. When his wealthy nephew visits, Marble asks him for a loan, but the young man refuses. Marble decides to kill his nephew. It is a twisted path to justice after Marble is transformed by the crime he committed and the wealth he gains.",
+    directors: [ 'Lothar Mendes' ],
+    year: 1932
+  },
+  {
+    plot: 'The Austrian Secret Service sends its most seductive agent to spy on the Russians.',
+    genres: [ 'Drama', 'Music', 'War' ],
+    title: 'Dishonored',
+    fullplot: 'The Austrian Secret Service sends its most seductive agent to spy on the Russians.',
+    directors: [ 'Josef von Sternberg' ],
+    year: 1931
+  },
+  {
+    plot: 'An alcoholic lawyer who successfully defended a notorious gambler on a murder charge objects when his free-spirited daughter becomes romantically involved with him.',
+    genres: [ 'Crime', 'Drama', 'Romance' ],
+    title: 'A Free Soul',
+    fullplot: "Stephen Ashe, an upper class alcoholic defense attourney, successfully defends local mobster Ace Wilfong in a murder case. After his daughter Jan Ashe breaks her engagement to polo player Dwight Winthrop and starts an affair with Wilfong, she finds that the liason is not easily severed when she wants out. Winthrop earns Miss Ashe's true affections by killing Wilfong to break his grip on her. Now the question is, can Stephen Ashe save Winthrop with an impassioned defense speech to the jury?",
+    directors: [ 'Clarence Brown' ],
+    year: 1931
+  },
+  {
+    genres: [ 'Comedy', 'Crime', 'Musical' ],
+    title: "L'opèra de quat'sous",
+    directors: [ 'Georg Wilhelm Pabst' ],
+    year: 1931
+  },
+  {
+    plot: 'In his final film, F.W. Murnau presents the tale of two young lovers on the idyllic island of Bora Bora in the South Pacific. Their life is shattered when the old warrior declares the girl ...',
+    genres: [ 'Drama', 'Romance', 'Adventure' ],
+    title: 'Tabu: A Story of the South Seas',
+    fullplot: 'In his final film, F.W. Murnau presents the tale of two young lovers on the idyllic island of Bora Bora in the South Pacific. Their life is shattered when the old warrior declares the girl to be the Chosen Maid and it is forbidden for any man to even look upon her. Refusing to accept a life apart, they run off to another island, one that is decadent and westernized. The boy works as a pearl diver but not quite understanding the concept of money, is soon in debt. When the old warrior tracks them down they again plan to run away but in a desperate attempt to pay off his debts, the boy dives for pearls in shark-infested waters. The boy is successful but fate seems determined to keep the two lovers apart.',
+    directors: [ 'F.W. Murnau' ],
+    year: 1931
+  },
+  ... 21249 more items
+]
