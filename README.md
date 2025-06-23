@@ -10,6 +10,8 @@ This application demonstrates semantic search capabilities using Weaviate and Mo
 - Select search algorithms (hybrid, BM25F, vector)
 - Genre filtering
 - Detailed movie information display
+- Retry mechanism for Weaviate connection
+- Error handling and user feedback
 
 ## Setup
 
@@ -48,3 +50,20 @@ This application demonstrates semantic search capabilities using Weaviate and Mo
 - `requirements.txt`: Python dependencies
 - `.streamlit/secrets.toml`: Streamlit secrets configuration
 - `README.md`: Project documentation
+- `movies-schema.json`: Weaviate schema definition
+- `movies.json`: Sample movie data
+- `import_movies.py`: Script to import data into Weaviate
+- `query_movies.py`: Example queries for testing
+- `weaviate-config.yaml`: Weaviate configuration
+- `.gitignore`: Git ignore file
+
+## Configuration
+
+The application uses environment variables for configuration. Create a `.env` file with the following variables:
+
+```
+MONGODB_URI=mongodb://localhost:27017
+MONGODB_DB=sample_mflix
+MONGODB_COLLECTION=movies
+WEAVIATE_URL=http://localhost:8080
+```

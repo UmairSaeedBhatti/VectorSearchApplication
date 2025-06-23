@@ -11,3 +11,29 @@ weaviate:
   api:
     port: 8080
     scheme: http
+
+  modules:
+    enabled: []
+
+  module_config: {}
+
+  additionalProperties:
+    enable: true
+
+  maxWALSyncDuration: 100ms
+  maxWALSyncTimeout: 100ms
+
+  maxImportGoroutines: 100
+  maxImportBatchSize: 1000
+  maxImportBatchTimeout: 100ms
+
+  maxSearchGoroutines: 100
+  maxSearchBatchSize: 1000
+  maxSearchBatchTimeout: 100ms
+
+  maxBatchSize: 1000
+  maxBatchTimeout: 100ms
+
+  maxBatchGoroutines: 100
+  maxBatchBatchSize: 1000
+  maxBatchBatchTimeout: 100ms

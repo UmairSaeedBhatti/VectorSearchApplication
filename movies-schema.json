@@ -2,37 +2,37 @@
   "classes": [
     {
       "class": "Movie",
-      "description": "A movie from the IMDB dataset",
+      "description": "A movie",
       "properties": [
         {
           "name": "title",
-          "dataType": ["text"],
+          "dataType": ["string"],
           "description": "The title of the movie"
-        },
-        {
-          "name": "plot",
-          "dataType": ["text"],
-          "description": "A short plot summary of the movie"
-        },
-        {
-          "name": "fullplot",
-          "dataType": ["text"],
-          "description": "A detailed plot summary of the movie"
-        },
-        {
-          "name": "genres",
-          "dataType": ["text[]"],
-          "description": "List of genres the movie belongs to"
-        },
-        {
-          "name": "directors",
-          "dataType": ["text[]"],
-          "description": "List of directors of the movie"
         },
         {
           "name": "year",
           "dataType": ["int"],
-          "description": "Year of release"
+          "description": "The year the movie was released"
+        },
+        {
+          "name": "genres",
+          "dataType": ["string[]"],
+          "description": "The genres of the movie"
+        },
+        {
+          "name": "directors",
+          "dataType": ["string[]"],
+          "description": "The directors of the movie"
+        },
+        {
+          "name": "plot",
+          "dataType": ["string"],
+          "description": "The plot summary of the movie"
+        },
+        {
+          "name": "fullplot",
+          "dataType": ["string"],
+          "description": "The full plot description of the movie"
         }
       ]
     }
