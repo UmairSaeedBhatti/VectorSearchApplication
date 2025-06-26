@@ -8,8 +8,13 @@ import numpy as np
 
 def init_mongodb_client():
     try:
-        # Connect to MongoDB Atlas
-        client = MongoClient("mongodb+srv://umairsaeed368:XRY1KbbQBy1H62m6@cluster0.ql5xox0.mongodb.net/")
+        # Get MongoDB URI from environment
+        mongodb_uri = os.getenv('MONGODB_URI')
+        if not mongodb_uri:
+            raise ValueError("MONGODB_URI environment variable must be set")
+            
+        # Initialize MongoDB client
+        client = MongoClient(mongodb_uri)
         return client
     except Exception as e:
         st.error(f"Failed to connect to MongoDB: {str(e)}")
@@ -17,10 +22,27 @@ def init_mongodb_client():
 
 def init_weaviate_client():
     try:
-        # Initialize Weaviate client with your REST endpoint
+        import os
+        
+        # Get Weaviate host from environment
+        weaviate_host = os.getenv('WEAVIATE_HOST')
+        if not weaviate_host:
+            raise ValueError("WEAVIATE_HOST environment variable must be set")
+            
+        # Get credentials from environment variables
+        weaviate_user = os.getenv('WEAVIATE_USER')
+        weaviate_password = os.getenv('WEAVIATE_PASSWORD')
+        
+        if not weaviate_user or not weaviate_password:
+            raise ValueError("WEAVIATE_USER and WEAVIATE_PASSWORD environment variables must be set")
+            
+        # Initialize Weaviate client with authentication
         client = Client(
-            url="https://xynjji0jt6sl5vpgtyvig.c0.europe-west3.gcp.weaviate.cloud",
-            auth_client_secret=None,  # Weaviate Cloud doesn't require auth_client_secret
+            url=weaviate_host,
+            auth_client_secret=AuthClientPassword(
+                username=weaviate_user,
+                password=weaviate_password
+            ),
             timeout_config=(5, 30)
         )
         
