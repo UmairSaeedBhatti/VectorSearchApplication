@@ -1,35 +1,77 @@
 import streamlit as st
-from weaviate import Client
+import weaviate
+from weaviate.client import Client
+from weaviate.auth import AuthClientPassword
 from pymongo import MongoClient
-import time
 import json
 from sentence_transformers import SentenceTransformer
 import numpy as np
+from dotenv import load_dotenv
+import os
+import torch
+import time
+from pymongo import MongoClient
 
 def init_mongodb_client():
     try:
+        import os
+        from dotenv import load_dotenv
+        from pymongo import MongoClient
+        
+        # Load local environment variables if available
+        if os.path.exists('.env.local'):
+            load_dotenv('.env.local')
+        
         # Get MongoDB URI from environment
         mongodb_uri = os.getenv('MONGODB_URI')
+        
+        # If no URI is set, use local MongoDB
         if not mongodb_uri:
-            raise ValueError("MONGODB_URI environment variable must be set")
-            
+            mongodb_uri = "mongodb://localhost:27017"
+            st.info("Using local MongoDB instance")
+        
         # Initialize MongoDB client
         client = MongoClient(mongodb_uri)
+        
+        # Test connection
+        try:
+            client.admin.command('ping')
+            st.success("MongoDB connection successful!")
+        except Exception as e:
+            st.error(f"Failed to connect to MongoDB: {str(e)}")
+            return None
+            
         return client
     except Exception as e:
         st.error(f"Failed to connect to MongoDB: {str(e)}")
+        st.info("Please make sure MongoDB is running and accessible")
         return None
 
 def init_weaviate_client():
     try:
-        import os
+        # Load local environment variables if available
+        if os.path.exists('.env.local'):
+            load_dotenv('.env.local')
         
         # Get Weaviate host from environment
         weaviate_host = os.getenv('WEAVIATE_HOST')
+        
+        # If no host is set, use local Weaviate
         if not weaviate_host:
-            raise ValueError("WEAVIATE_HOST environment variable must be set")
+            weaviate_host = "http://localhost:8080"
+            st.warning("Using local Weaviate instance")
             
-        # Get credentials from environment variables
+            # For local development, no auth needed
+            client = Client(
+                url=weaviate_host,
+                timeout_config=(5, 30)
+            )
+            if client.is_ready():
+                return client
+            else:
+                raise Exception("Local Weaviate connection failed")
+        
+        # For cloud instance, use auth
         weaviate_user = os.getenv('WEAVIATE_USER')
         weaviate_password = os.getenv('WEAVIATE_PASSWORD')
         
@@ -57,20 +99,27 @@ def init_weaviate_client():
 
 def init_model():
     try:
-        # Initialize model with CPU as default device
-        model = SentenceTransformer('all-MiniLM-L6-v2', device='cpu')
+        import torch
+        from sentence_transformers import SentenceTransformer
+        import torch.nn as nn
         
-        # Try to move to GPU if available
-        try:
-            import torch
-            if torch.cuda.is_available():
-                model = model.to('cuda')
-        except:
-            pass
-            
+        # Initialize model with CPU as default
+        model = SentenceTransformer('all-MiniLM-L6-v2')
+        
+        # Move to appropriate device
+        device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        model = model.to(device)
+        
+        # Ensure model parameters are on the correct device
+        for param in model.parameters():
+            if param.device != device:
+                param.data = param.data.to(device)
+        
+        st.success("Model initialized successfully!")
         return model
     except Exception as e:
         st.error(f"Failed to initialize model: {str(e)}")
+        st.info("Please make sure PyTorch and sentence-transformers are properly installed")
         return None
 
 weaviate_client = init_weaviate_client()
@@ -169,11 +218,27 @@ with st.sidebar:
 
 def search_movies(query, num_results=10, search_type="Semantic Search", genres=[], year_range=None):
     if not query.strip():
+        st.warning("Please enter a search query")
         return []
     
-    # Check if query is too short or contains only non-alphabetic characters
-    if len(query) < 3 or not any(c.isalpha() for c in query):
+    # Handle year search specifically
+    try:
+        year = int(query)
+        if 1900 <= year <= 2025:
+            # If it's a valid year, use it as a filter
+            if year_range is None:
+                year_range = (year, year)
+            else:
+                year_range = (max(year_range[0], year), min(year_range[1], year))
+            query = ""  # Clear the query since we're using it as a year filter
+    except ValueError:
+        # Not a valid year, proceed with normal search
+        pass
+    
+    # For non-year queries, check if it's meaningful
+    if query and (len(query) < 3 or not any(c.isalpha() for c in query)):
         st.warning("Please enter a meaningful search query with at least 3 letters.")
+        st.info("Try searching for movie titles, directors, or genres")
         return []
     
     with st.spinner(f"Searching {search_type.lower()}..."):
