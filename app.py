@@ -50,8 +50,8 @@ def init_mongodb_client():
 def init_weaviate_client():
     try:
         import os
-        from weaviate.auth import AuthClientPassword
-        from weaviate.client import Client
+        import requests
+        from weaviate import Client
         
         # Load local environment variables if available
         if os.path.exists('.env.local'):
@@ -65,25 +65,34 @@ def init_weaviate_client():
             weaviate_host = "http://localhost:8080"
             st.info("Using local Weaviate instance")
             
-            # For local development, no auth needed
+        # Check Weaviate health before initializing
+        health_url = f"{weaviate_host}/v1/.well-known/ready"
+        try:
+            response = requests.get(health_url)
+            if response.status_code == 200:
+                st.success(f"Weaviate health check: {response.status_code} - {response.text}")
+            else:
+                st.error(f"Weaviate health check failed: {response.status_code} - {response.text}")
+                return None
+        except Exception as e:
+            st.error(f"Failed to check Weaviate health: {str(e)}")
+            return None
+            
+        # Initialize Weaviate client with authentication if cloud instance
+        if weaviate_host.startswith('http://localhost:8080'):
+            # Local instance - no auth needed
+            client = Client(weaviate_host)
+        else:
+            # Cloud instance - use API key auth
+            weaviate_api_key = os.getenv('WEAVIATE_API_KEY')
+            if not weaviate_api_key:
+                raise ValueError("WEAVIATE_API_KEY environment variable must be set for cloud instance")
+                
             client = Client(
                 url=weaviate_host,
-                timeout_config=(5, 30)
+                auth_client_secret=AuthApiKey(weaviate_api_key)
             )
-            if client.is_ready():
-                st.success("Local Weaviate connection successful!")
-                return client
-            else:
-                raise Exception("Local Weaviate connection failed")
         
-        # For cloud instance, use auth
-        weaviate_user = os.getenv('WEAVIATE_USER')
-        weaviate_password = os.getenv('WEAVIATE_PASSWORD')
-        
-        if not weaviate_user or not weaviate_password:
-            raise ValueError("WEAVIATE_USER and WEAVIATE_PASSWORD environment variables must be set")
-            
-        # Initialize Weaviate client with authentication
         client = Client(
             url=weaviate_host,
             auth_config=AuthClientPassword(
