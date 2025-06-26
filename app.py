@@ -122,21 +122,23 @@ def init_weaviate_client():
 
 def init_model():
     try:
-        import torch
         from sentence_transformers import SentenceTransformer
-        import torch.nn as nn
+        import torch
         
-        # Initialize model with CPU as default
+        # Check if CUDA is available
+        device = "cuda" if torch.cuda.is_available() else "cpu"
+        st.info(f"Using device: {device}")
+        
+        # Initialize model
         model = SentenceTransformer('all-MiniLM-L6-v2')
         
-        # Move to appropriate device
-        device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+        # Move model to device
         model = model.to(device)
         
-        # Ensure model parameters are on the correct device
-        for param in model.parameters():
-            if param.device != device:
-                param.data = param.data.to(device)
+        # Verify model is on correct device
+        if next(model.parameters()).device.type != device:
+            st.error("Model device mismatch!")
+            return None
         
         st.success("Model initialized successfully!")
         return model
