@@ -1,41 +1,75 @@
 import streamlit as st
 from weaviate import Client
-import config
-import json
-import streamlit as st
+from pymongo import MongoClient
 import time
+import json
+from sentence_transformers import SentenceTransformer
+import numpy as np
 
-# Initialize Weaviate client with retry logic
+def init_mongodb_client():
+    try:
+        client = MongoClient('mongodb://localhost:27017')
+        return client
+    except Exception as e:
+        st.error(f"Failed to connect to MongoDB: {str(e)}")
+        return None
+
 def init_weaviate_client():
-    weaviate_config = config.get_weaviate_config()
-    retry_count = 0
-    
-    while retry_count < weaviate_config['retry_max']:
+    try:
+        client = Client("http://localhost:8080")
+        if client.is_ready():
+            return client
+        else:
+            raise Exception("Weaviate connection failed")
+    except Exception as e:
+        st.error(f"Failed to connect to Weaviate: {str(e)}")
+        return None
+
+def init_model():
+    try:
+        # Initialize model with CPU as default device
+        model = SentenceTransformer('all-MiniLM-L6-v2', device='cpu')
+        
+        # Try to move to GPU if available
         try:
-            client = Client(weaviate_config['url'])
-            if client.is_ready():
-                return client
-            else:
-                raise Exception("Weaviate connection failed")
-        except Exception as e:
-            retry_count += 1
-            if retry_count >= weaviate_config['retry_max']:
-                st.error(f"Failed to connect to Weaviate after {retry_count} attempts")
-                return None
-            time.sleep(weaviate_config['retry_delay'])
-            st.warning(f"Attempt {retry_count}/{weaviate_config['retry_max']}: Retrying Weaviate connection...")
+            import torch
+            if torch.cuda.is_available():
+                model = model.to('cuda')
+        except:
+            pass
+            
+        return model
+    except Exception as e:
+        st.error(f"Failed to initialize model: {str(e)}")
+        return None
 
-# Initialize client
-client = init_weaviate_client()
+weaviate_client = init_weaviate_client()
+mongo_client = init_mongodb_client()
+model = init_model()
 
-if client is None:
-    st.error("Failed to connect to Weaviate. Please check your configuration and try again.")
+if weaviate_client is None or mongo_client is None or model is None:
+    st.error("Failed to initialize one or more components. Please check your configuration and try again.")
     st.stop()
 
-# Initialize Weaviate client
-client = Client(config.WEAVIATE_URL)
+db = mongo_client['movies_db']
+collection = db['movies']
 
-st.title("Movie Semantic Search")
+# Add a prominent header with developer credit
+st.markdown("""
+<div style='text-align: center; padding: 20px; background-color: #f8f9fa; border-radius: 8px; margin-bottom: 20px;'>
+    <h1 style='color: #2E74B5; margin: 0; padding: 10px 0;'>Movie Search App</h1>
+    <p style='font-size: 18px; color: #666; margin: 0; padding: 10px 0;'>Developed by <span style='color: #2E74B5; font-weight: bold;'>Umair Saeed</span></p>
+</div>
+""", unsafe_allow_html=True)
+
+# Add a separator
+st.markdown("""
+<hr style='border: 1px solid #eee; margin: 20px 0; opacity: 0.5;'>
+""", unsafe_allow_html=True)
+
+# Search history
+if 'search_history' not in st.session_state:
+    st.session_state.search_history = []
 
 # Add search examples
 st.markdown("### Search Examples:")
@@ -47,118 +81,227 @@ examples = [
     "D.W. Griffith"
 ]
 
-# Create a function to handle search example clicks
 def handle_search_click(query):
     st.session_state.query = query
+    st.session_state.search_history.append(query)
 
 for example in examples:
     st.button(f"Search: {example}", key=f"search_{example}", on_click=handle_search_click, args=(example,))
+
+# Display search history
+if st.session_state.search_history:
+    st.markdown("### Recent Searches:")
+    for i, hist_query in enumerate(st.session_state.search_history[-5:]):
+        if st.button(f"{hist_query}", key=f"history_{i}", on_click=handle_search_click, args=(hist_query,)):
+            st.session_state.query = hist_query
+
+# Main search interface
+query = st.text_input("Enter your search query:", key="query")
 
 # Sidebar configuration
 with st.sidebar:
     st.header("Search Configuration")
     
-    # Number of results
     num_results = st.slider(
         "Number of Results",
         min_value=1,
         max_value=20,
-        value=config.DEFAULT_RESULTS,
-        step=1
+        value=10,
+        step=1,
+        key="num_results_slider"
     )
     
-    # Similarity metric
-    similarity_metric = st.selectbox(
-        "Similarity Metric",
-        config.SIMILARITY_METRICS
+    search_type = st.selectbox(
+        "Search Type",
+        ["Semantic Search", "Exact Match"],
+        key="search_type_select"
     )
     
-    # Search algorithm
-    st.info("Note: Using text-based search only since vector search requires a vectorizer module")
-    search_algorithm = st.selectbox(
-        "Search Algorithm",
-        ["text"]  # Only show text-based search option
-    )
-    
-    # Genre filter
     genres = st.multiselect(
         "Filter by Genre",
-        options=['Short', 'Drama']
+        options=['Short', 'Drama', 'Crime', 'Comedy', 'Action', 'Romance', 'Western', 'Horror', 'Musical', 'Family'],
+        key="genre_filter"
     )
+    
+    year_range = st.slider(
+        "Year Range",
+        min_value=1900,
+        max_value=2025,
+        value=(1900, 2025),
+        step=1,
+        key="year_range_slider"
+    )
+    
+    if st.button("Clear Filters", key="clear_filters_btn"):
+        st.session_state.genres = []
+        st.session_state.year_range = (1900, 2025)
+        st.rerun()
 
-# Main search interface
-query = st.text_input("Enter your search query:", key="query")
-
-if st.button("Search"):
-    if query:
-        # Build the query
-        search_query = client.query.get(
-            config.WEAVIATE_CLASS,
-            ["title", "plot", "fullplot", "genres", "year", "directors"]
-        )
-
-        # Add filters if genres are selected
-        if genres:
-            search_query = search_query.with_where({
-                "path": ["genres"],
-                "operator": "ContainsAny",
-                "valueStringArray": genres
-            })
-
-        # Use text-based search
-        search_query = search_query.with_where({
-            "path": ["title", "plot", "fullplot"],
-            "operator": "Like",
-            "valueString": f"%{query}%"
-        })
-        
-        # Add filters if genres are selected
-        if genres:
-            search_query = search_query.with_where({
-                "path": ["genres"],
-                "operator": "ContainsAny",
-                "valueStringArray": genres
-            })
-
-        try:
-            # Execute the query
-            result = search_query.do()
-            
-            # Debug output
-            st.write("Query result:")
-            st.json(result)
-            
-            # Display results
-            if 'data' in result and 'Get' in result['data'] and config.WEAVIATE_CLASS in result['data']['Get']:
-                movies = result['data']['Get'][config.WEAVIATE_CLASS]
+def search_movies(query, num_results=10, search_type="Semantic Search", genres=[], year_range=None):
+    if not query.strip():
+        return []
+    
+    # Check if query is too short or contains only non-alphabetic characters
+    if len(query) < 3 or not any(c.isalpha() for c in query):
+        st.warning("Please enter a meaningful search query with at least 3 letters.")
+        return []
+    
+    with st.spinner(f"Searching {search_type.lower()}..."):
+        if search_type == "Semantic Search":
+            try:
+                # Create base query
+                results = weaviate_client.query.get("Movie", [
+                    "title", "year", "genres", "directors", "plot"
+                ])
                 
-                if movies:
-                    st.write(f"Found {len(movies)} results:")
-                    st.write("---")
-                    for movie in movies[:num_results]:
-                        st.markdown(f"### {movie['title']}")
-                        st.write(f"**Year:** {movie['year']}")
-                        st.write(f"**Genres:** {', '.join(movie['genres'])}")
-                        st.write(f"**Directors:** {', '.join(movie['directors'])}")
-                        st.write(f"**Plot:** {movie['plot']}")
-                        st.write(f"**Full Plot:** {movie['fullplot']}")
-                        st.write("---")
+                # Add filters
+                if genres or year_range:
+                    filter_operands = []
+                    
+                    if genres:
+                        filter_operands.append({
+                            "path": ["genres"],
+                            "operator": "ContainsAny",
+                            "valueStringArray": genres
+                        })
+                    
+                    if year_range:
+                        filter_operands.append({
+                            "operator": "And",
+                            "operands": [
+                                {
+                                    "path": ["year"],
+                                    "operator": "GreaterThanEqual",
+                                    "valueInt": year_range[0]
+                                },
+                                {
+                                    "path": ["year"],
+                                    "operator": "LessThanEqual",
+                                    "valueInt": year_range[1]
+                                }
+                            ]
+                        })
+                    
+                    results = results.with_where({
+                        "operator": "And",
+                        "operands": filter_operands
+                    })
+                
+                # Generate text embedding
+                text_embedding = model.encode(query)
+                
+                # Add semantic search with a minimum similarity threshold
+                results = results.with_near_vector({
+                    "vector": text_embedding.tolist(),
+                    "certainty": 0.5  # Minimum similarity threshold (0.0 to 1.0)
+                }).with_limit(num_results * 2).do()  # Get more results for reranking
+                
+                movies = results.get("data", {}).get("Get", {}).get("Movie", [])
+                
+                if not movies:
+                    st.warning("No results found. Try searching for:")
+                    for example in examples:
+                        st.markdown(f"- {example}")
+                    return []
+                
+                # Reranking logic
+                reranked_movies = []
+                
+                # Calculate scores for each movie
+                for movie in movies:
+                    score = 0.0
+                    
+                    # Title match score
+                    if query.lower() in movie['title'].lower():
+                        score += 0.5
+                    
+                    # Genre match score
+                    if genres and any(g.lower() in query.lower() for g in movie['genres']):
+                        score += 0.3
+                    
+                    # Year match score if year is in query
+                    if any(str(y) in query for y in range(1900, 2025)):
+                        score += 0.2
+                    
+                    # Director match score
+                    if any(d.lower() in query.lower() for d in movie['directors']):
+                        score += 0.4
+                    
+                    reranked_movies.append({
+                        'movie': movie,
+                        'score': score
+                    })
+                
+                # Sort movies by score
+                reranked_movies.sort(key=lambda x: x['score'], reverse=True)
+                
+                # Take top N results
+                top_movies = reranked_movies[:num_results]
+                
+                # Prepare final results
+                final_results = [m['movie'] for m in top_movies]
+                
+                if final_results:
+                    st.success(f"Found {len(final_results)} results")
                 else:
                     st.warning("No results found. Try searching for:")
                     for example in examples:
                         st.markdown(f"- {example}")
-            elif 'errors' in result:
-                st.error("Error in query:")
-                st.json(result['errors'])
-            else:
-                st.error("Unexpected query response format")
-                st.json(result)
                 
-        except Exception as e:
-            st.error(f"Error executing query: {str(e)}")
-            st.error("Query details:")
-            st.write(f"Search query: {query}")
-            st.write(f"Genres filter: {genres}")
-            st.write(f"Similarity metric: {similarity_metric}")
-            st.write(f"Search algorithm: {search_algorithm}")
-            st.write(f"Number of results: {num_results}")
+                return final_results
+                
+            except Exception as e:
+                st.error(f"Error performing semantic search: {str(e)}")
+                return []
+        else:
+            try:
+                query_filter = {
+                    "$or": [
+                        {"title": {"$regex": query, "$options": "i"}},
+                        {"plot": {"$regex": query, "$options": "i"}},
+                        {"fullplot": {"$regex": query, "$options": "i"}}
+                    ]
+                }
+                
+                if genres:
+                    query_filter["genres"] = {"$in": genres}
+                
+                if year_range:
+                    query_filter["year"] = {"$gte": year_range[0], "$lte": year_range[1]}
+                
+                results = list(collection.find(query_filter).limit(num_results))
+                
+                if results:
+                    st.success(f"Found {len(results)} results")
+                else:
+                    st.warning("No results found. Try searching for:")
+                    for example in examples:
+                        st.markdown(f"- {example}")
+                
+                return results
+                
+            except Exception as e:
+                st.error(f"Error performing exact match search: {str(e)}")
+                return []
+
+if st.button("Search", key="search_btn"):
+    if query:
+        results = search_movies(query, num_results, search_type, genres, year_range)
+        
+        if results:
+            st.write("---")
+            for movie in results:
+                with st.expander(f"{movie['title']} ({movie['year']})"):
+                    st.write(f"**Genres:** {', '.join(movie['genres'])}")
+                    st.write(f"**Directors:** {', '.join(movie['directors'])}")
+                    st.write(f"**Plot:** {movie['plot']}")
+                    if 'fullplot' in movie and movie['fullplot']:
+                        st.write(f"**Full Plot:** {movie['fullplot']}")
+            st.write("---")
+        else:
+            st.warning("No results found. Try searching for:")
+            for example in examples:
+                st.markdown(f"- {example}")
+    else:
+        st.warning("Please enter a search query.")
+        st.write("Number of results: ", num_results)

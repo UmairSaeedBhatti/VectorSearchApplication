@@ -21,6 +21,55 @@ This application demonstrates semantic search capabilities using Weaviate and Mo
    ```
 
 2. Set up environment variables:
+   - Copy `.env.example` to `.env`
+   - Update the values in `.env` with your actual connection strings
+
+## Deployment to Streamlit Cloud
+
+1. Create a Streamlit Cloud account at https://streamlit.io/cloud
+
+2. Create a new app:
+   - Go to https://streamlit.io/cloud
+   - Click "New App"
+   - Connect your GitHub repository
+   - Select the branch to deploy
+
+3. Configure environment variables:
+   - Go to your app settings
+   - Add the following environment variables:
+     - `MONGODB_URI`: Your MongoDB connection string
+     - `WEAVIATE_HOST`: Your Weaviate instance URL
+     - `MODEL_NAME`: The sentence transformer model name (default: all-MiniLM-L6-v2)
+
+4. Deploy:
+   - Click "Deploy" in Streamlit Cloud
+   - Wait for the deployment to complete
+   - Access your app through the provided URL
+
+## Features
+
+- Semantic search using Weaviate
+- Reranking of search results based on multiple factors
+- Filter by number of results
+- Choose search type (Semantic or Exact Match)
+- Genre filtering
+- Year range filtering
+- Search history
+- Clear filters functionality
+- Detailed movie information display
+- Error handling and user feedback
+- Developer credit display
+
+## Requirements
+
+- Python 3.8+
+- MongoDB instance
+- Weaviate instance
+- Sentence Transformers model
+- Streamlit Cloud account for deployment
+   ```
+
+2. Set up environment variables:
    - Create a `.env` file in the root directory
    - Add your MongoDB and Weaviate configuration
 
