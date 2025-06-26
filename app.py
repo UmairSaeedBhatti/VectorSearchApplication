@@ -78,32 +78,11 @@ def init_weaviate_client():
             st.error(f"Failed to check Weaviate health: {str(e)}")
             return None
             
-        # Initialize Weaviate client with authentication if cloud instance
-        if weaviate_host.startswith('http://localhost:8080'):
-            # Local instance - no auth needed
-            client = Client(weaviate_host)
-        else:
-            # Cloud instance - use API key auth
-            weaviate_api_key = os.getenv('WEAVIATE_API_KEY')
-            if not weaviate_api_key:
-                raise ValueError("WEAVIATE_API_KEY environment variable must be set for cloud instance")
-                
-            client = Client(
-                url=weaviate_host,
-                auth_client_secret=AuthApiKey(weaviate_api_key)
-            )
-        
-        client = Client(
-            url=weaviate_host,
-            auth_config=AuthClientPassword(
-                username=weaviate_user,
-                password=weaviate_password
-            ),
-            timeout_config=(5, 30)
-        )
+        # Initialize Weaviate client (no auth needed for local)
+        client = Client(weaviate_host)
         
         if client.is_ready():
-            st.success("Weaviate Cloud connection successful!")
+            st.success("Weaviate connection successful!")
             return client
         else:
             raise Exception("Weaviate connection failed")
