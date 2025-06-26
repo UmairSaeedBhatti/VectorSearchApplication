@@ -132,8 +132,11 @@ def init_model():
         # Initialize model
         model = SentenceTransformer('all-MiniLM-L6-v2')
         
-        # Move model to device
-        model = model.to(device)
+        # Move model to device using to_empty()
+        if device == "cpu":
+            model = SentenceTransformer('all-MiniLM-L6-v2', device='cpu')
+        else:
+            model = SentenceTransformer('all-MiniLM-L6-v2', device='cuda')
         
         # Verify model is on correct device
         if next(model.parameters()).device.type != device:
