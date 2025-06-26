@@ -50,7 +50,6 @@ def init_mongodb_client():
 def init_weaviate_client():
     try:
         import os
-        from weaviate.auth import AuthClientPassword
         from weaviate.client import Client
         
         # Load local environment variables if available
@@ -65,36 +64,11 @@ def init_weaviate_client():
             weaviate_host = "http://localhost:8080"
             st.info("Using local Weaviate instance")
             
-            # For local development, no auth needed
-            client = Client(
-                url=weaviate_host,
-                timeout_config=(5, 30)
-            )
-            if client.is_ready():
-                st.success("Local Weaviate connection successful!")
-                return client
-            else:
-                raise Exception("Local Weaviate connection failed")
-        
-        # For cloud instance, use auth
-        weaviate_user = os.getenv('WEAVIATE_USER')
-        weaviate_password = os.getenv('WEAVIATE_PASSWORD')
-        
-        if not weaviate_user or not weaviate_password:
-            raise ValueError("WEAVIATE_USER and WEAVIATE_PASSWORD environment variables must be set")
-            
-        # Initialize Weaviate client with authentication
-        client = Client(
-            url=weaviate_host,
-            auth_config=AuthClientPassword(
-                username=weaviate_user,
-                password=weaviate_password
-            ),
-            timeout_config=(5, 30)
-        )
+        # Initialize Weaviate client
+        client = Client(weaviate_host)
         
         if client.is_ready():
-            st.success("Weaviate Cloud connection successful!")
+            st.success("Weaviate connection successful!")
             return client
         else:
             raise Exception("Weaviate connection failed")
