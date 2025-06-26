@@ -84,16 +84,24 @@ def init_weaviate_client():
             raise ValueError("WEAVIATE_USER and WEAVIATE_PASSWORD environment variables must be set")
             
         # Initialize Weaviate client with authentication
-        auth_config = AuthClientPassword(
-            username=weaviate_user,
-            password=weaviate_password
-        )
-        
         client = Client(
             weaviate_host,
-            auth_config=auth_config,
+            auth_client_secret=AuthClientPassword(
+                username=weaviate_user,
+                password=weaviate_password
+            ),
             timeout_config=(5, 30)
         )
+        
+        if client.is_ready():
+            st.success("Weaviate Cloud connection successful!")
+            return client
+        else:
+            raise Exception("Weaviate connection failed")
+    except Exception as e:
+        st.error(f"Failed to connect to Weaviate: {str(e)}")
+        st.info("Please make sure Weaviate is running and accessible")
+        return None
         
         if client.is_ready():
             st.success("Weaviate Cloud connection successful!")
