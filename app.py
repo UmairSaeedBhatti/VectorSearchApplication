@@ -8,7 +8,8 @@ import numpy as np
 
 def init_mongodb_client():
     try:
-        client = MongoClient('mongodb://localhost:27017')
+        # Connect to MongoDB Atlas
+        client = MongoClient("mongodb+srv://umairsaeed368:XRY1KbbQBy1H62m6@cluster0.ql5xox0.mongodb.net/")
         return client
     except Exception as e:
         st.error(f"Failed to connect to MongoDB: {str(e)}")
@@ -16,7 +17,14 @@ def init_mongodb_client():
 
 def init_weaviate_client():
     try:
-        client = Client("http://localhost:8080")
+        # Initialize Weaviate client with your REST endpoint
+        client = Client(
+            url="https://xynjji0jt6sl5vpgtyvig.c0.europe-west3.gcp.weaviate.cloud",
+            auth_client_secret=None,  # Weaviate Cloud doesn't require auth_client_secret
+            timeout_config=(5, 30)
+        )
+        
+        # Check if we can connect
         if client.is_ready():
             return client
         else:
