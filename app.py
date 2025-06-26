@@ -52,18 +52,15 @@ def init_weaviate_client():
         import os
         import requests
         from weaviate import Client
+        from weaviate.auth import AuthClientPassword
         
-        # Load local environment variables if available
-        if os.path.exists('.env.local'):
-            load_dotenv('.env.local')
-        
-        # Get Weaviate host from environment
+        # Load environment variables
         weaviate_host = os.getenv('WEAVIATE_HOST')
+        weaviate_user = os.getenv('WEAVIATE_USER')
+        weaviate_password = os.getenv('WEAVIATE_PASSWORD')
         
-        # If no host is set, use local Weaviate
-        if not weaviate_host:
-            weaviate_host = "http://localhost:8080"
-            st.info("Using local Weaviate instance")
+        if not weaviate_host or not weaviate_user or not weaviate_password:
+            raise ValueError("WEAVIATE_HOST, WEAVIATE_USER, and WEAVIATE_PASSWORD must be set")
             
         # Check Weaviate health before initializing
         health_url = f"{weaviate_host}/v1/.well-known/ready"
@@ -78,18 +75,15 @@ def init_weaviate_client():
             st.error(f"Failed to check Weaviate health: {str(e)}")
             return None
             
-        # Initialize Weaviate client (no auth needed for local)
-        client = Client(weaviate_host)
-        
-        if client.is_ready():
-            st.success("Weaviate connection successful!")
-            return client
-        else:
-            raise Exception("Weaviate connection failed")
-    except Exception as e:
-        st.error(f"Failed to connect to Weaviate: {str(e)}")
-        st.info("Please make sure Weaviate is running and accessible")
-        return None
+        # Initialize Weaviate client with authentication
+        client = Client(
+            url=weaviate_host,
+            auth_client_secret=AuthClientPassword(
+                username=weaviate_user,
+                password=weaviate_password
+            ),
+            timeout_config=(5, 30)
+        )
         
         if client.is_ready():
             st.success("Weaviate Cloud connection successful!")
