@@ -125,18 +125,15 @@ def init_model():
         from sentence_transformers import SentenceTransformer
         import torch
         
+        # Initialize model first
+        model = SentenceTransformer('all-MiniLM-L6-v2')
+        
         # Check if CUDA is available
         device = "cuda" if torch.cuda.is_available() else "cpu"
         st.info(f"Using device: {device}")
         
-        # Initialize model
-        model = SentenceTransformer('all-MiniLM-L6-v2')
-        
-        # Move model to device using to_empty()
-        if device == "cpu":
-            model = SentenceTransformer('all-MiniLM-L6-v2', device='cpu')
-        else:
-            model = SentenceTransformer('all-MiniLM-L6-v2', device='cuda')
+        # Move model to device
+        model._first_module().auto_model = model._first_module().auto_model.to(device)
         
         # Verify model is on correct device
         if next(model.parameters()).device.type != device:
