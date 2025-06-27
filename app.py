@@ -51,16 +51,16 @@ def init_weaviate_client():
     try:
         import os
         import requests
-        from weaviate import Client
-        from weaviate.auth import AuthClientPassword
+        from weaviate import connect_to_weaviate_cloud
+        from weaviate.classes.init import Auth
+        from weaviate.classes.config import Configure
         
         # Load environment variables
         weaviate_host = os.getenv('WEAVIATE_HOST')
-        weaviate_user = os.getenv('WEAVIATE_USER')
-        weaviate_password = os.getenv('WEAVIATE_PASSWORD')
+        weaviate_api_key = os.getenv('WEAVIATE_API_KEY')
         
-        if not weaviate_host or not weaviate_user or not weaviate_password:
-            raise ValueError("WEAVIATE_HOST, WEAVIATE_USER, and WEAVIATE_PASSWORD must be set")
+        if not weaviate_host or not weaviate_api_key:
+            raise ValueError("WEAVIATE_HOST and WEAVIATE_API_KEY must be set")
             
         # Check Weaviate health before initializing
         health_url = f"{weaviate_host}/v1/.well-known/ready"
@@ -75,14 +75,16 @@ def init_weaviate_client():
             st.error(f"Failed to check Weaviate health: {str(e)}")
             return None
             
-        # Initialize Weaviate client with authentication
-        client = Client(
-            weaviate_host,
-            auth_config=AuthClientPassword(
-                username=weaviate_user,
-                password=weaviate_password
-            ),
-            timeout_config=(5, 30)
+        # Initialize Weaviate client with API key authentication
+        client = connect_to_weaviate_cloud(
+            cluster_url=weaviate_host,
+            auth_credentials=Auth.api_key(weaviate_api_key)
+        )
+        
+        # Configure the client
+        client.config = Configure(
+            vectorizer=Configure.Vectorizer.text2vec_weaviate(),
+            generative=Configure.Generative.cohere()
         )
         
         if client.is_ready():
@@ -90,6 +92,22 @@ def init_weaviate_client():
             return client
         else:
             raise Exception("Weaviate connection failed")
+    except Exception as e:
+        st.error(f"Failed to connect to Weaviate: {str(e)}")
+        st.info("Please make sure Weaviate Cloud is running and accessible")
+        return None
+    finally:
+        if 'client' in locals():
+            try:
+                client.close()
+            except:
+                pass
+    
+    if client.is_ready():
+        st.success("Weaviate Cloud connection successful!")
+        return client
+    else:
+        raise Exception("Weaviate connection failed")
     except Exception as e:
         st.error(f"Failed to connect to Weaviate: {str(e)}")
         st.info("Please make sure Weaviate is running and accessible")
