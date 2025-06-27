@@ -94,33 +94,9 @@ def init_weaviate_client():
             raise Exception("Weaviate connection failed")
     except Exception as e:
         st.error(f"Failed to connect to Weaviate: {str(e)}")
-        st.info("Please make sure Weaviate Cloud is running and accessible")
-        return None
-    finally:
-        if 'client' in locals():
-            try:
-                client.close()
-            except:
-                pass
-        
-        if client.is_ready():
-            st.success("Weaviate Cloud connection successful!")
-            return client
-        else:
-            raise Exception("Weaviate connection failed")
-    except Exception as e:
-        st.error(f"Failed to connect to Weaviate: {str(e)}")
         st.info("Please make sure Weaviate is running and accessible")
         return None
         
-        # Check if we can connect
-        if client.is_ready():
-            return client
-        else:
-            raise Exception("Weaviate connection failed")
-    except Exception as e:
-        st.error(f"Failed to connect to Weaviate: {str(e)}")
-        return None
 
 def init_model():
     try:
