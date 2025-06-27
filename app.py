@@ -89,8 +89,11 @@ def init_weaviate_client():
         # Connect to Weaviate Cloud
         print("\nAttempting to connect to Weaviate Cloud...")
         client = weaviate.Client(
-            url=weaviate_url,
-            auth_client_secret=AuthApiKey(api_key=weaviate_api_key)
+            url=os.getenv("WEAVIATE_HOST"),
+            auth_client_secret=weaviate.AuthClientPassword(
+                username=os.getenv("WEAVIATE_USER"),
+                password=os.getenv("WEAVIATE_PASSWORD")
+            )
         )
         
         # Debug logging after connection
