@@ -102,16 +102,6 @@ def init_weaviate_client():
                 client.close()
             except:
                 pass
-    
-    if client.is_ready():
-        st.success("Weaviate Cloud connection successful!")
-        return client
-    else:
-        raise Exception("Weaviate connection failed")
-    except Exception as e:
-        st.error(f"Failed to connect to Weaviate: {str(e)}")
-        st.info("Please make sure Weaviate is running and accessible")
-        return None
         
         if client.is_ready():
             st.success("Weaviate Cloud connection successful!")
