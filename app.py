@@ -77,7 +77,7 @@ def init_weaviate_client():
             
         # Initialize Weaviate client with authentication
         client = Client(
-            url=weaviate_host,
+            weaviate_host,
             auth_client_secret=AuthClientPassword(
                 username=weaviate_user,
                 password=weaviate_password
