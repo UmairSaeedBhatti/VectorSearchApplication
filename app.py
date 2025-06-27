@@ -56,12 +56,21 @@ def init_weaviate_client():
         import weaviate
         from weaviate.classes.init import Auth
         
+        # Debug logging
+        print("Loading environment variables...")
+        print(f"WEAVIATE_URL: {os.getenv('WEAVIATE_URL')}")
+        print(f"WEAVIATE_API_KEY: {'***' + os.getenv('WEAVIATE_API_KEY')[-4:] if os.getenv('WEAVIATE_API_KEY') else 'Not set'}")
+        
         # Load credentials from environment variables
         weaviate_url = os.getenv("WEAVIATE_URL")
         weaviate_api_key = os.getenv("WEAVIATE_API_KEY")
         
         if not weaviate_url or not weaviate_api_key:
             raise ValueError("WEAVIATE_URL and WEAVIATE_API_KEY must be set in environment variables")
+            
+        # Debug logging
+        print(f"Using WEAVIATE_URL: {weaviate_url}")
+        print(f"Using WEAVIATE_API_KEY: {'***' + weaviate_api_key[-4:]}")
             
         # Connect to Weaviate Cloud
         client = weaviate.connect_to_weaviate_cloud(
