@@ -50,42 +50,30 @@ def init_mongodb_client():
 def init_weaviate_client():
     try:
         import os
-        import requests
-        from weaviate import connect_to_weaviate_cloud
+        import weaviate
         from weaviate.classes.init import Auth
-        from weaviate.classes.config import Configure
         
-        # Load environment variables
-        weaviate_host = os.getenv('WEAVIATE_HOST')
-        weaviate_api_key = os.getenv('WEAVIATE_API_KEY')
+        # Load credentials from environment variables
+        weaviate_url = os.getenv("WEAVIATE_URL")
+        weaviate_api_key = os.getenv("WEAVIATE_API_KEY")
         
-        if not weaviate_host or not weaviate_api_key:
-            raise ValueError("WEAVIATE_HOST and WEAVIATE_API_KEY must be set")
+        if not weaviate_url or not weaviate_api_key:
+            raise ValueError("WEAVIATE_URL and WEAVIATE_API_KEY must be set in environment variables")
             
-        # Check Weaviate health before initializing
-        health_url = f"{weaviate_host}/v1/.well-known/ready"
-        try:
-            response = requests.get(health_url)
-            if response.status_code == 200:
-                st.success(f"Weaviate health check: {response.status_code} - {response.text}")
-            else:
-                st.error(f"Weaviate health check failed: {response.status_code} - {response.text}")
-                return None
-        except Exception as e:
-            st.error(f"Failed to check Weaviate health: {str(e)}")
-            return None
-            
-        # Initialize Weaviate client with API key authentication
-        client = connect_to_weaviate_cloud(
-            cluster_url=weaviate_host,
+        # Connect to Weaviate Cloud
+        client = weaviate.connect_to_weaviate_cloud(
+            cluster_url=weaviate_url,
             auth_credentials=Auth.api_key(weaviate_api_key)
         )
         
-        # Configure the client
-        client.config = Configure(
-            vectorizer=Configure.Vectorizer.text2vec_weaviate(),
-            generative=Configure.Generative.cohere()
-        )
+        if client.is_ready():
+            st.success("Weaviate Cloud connection successful!")
+            return client
+        else:
+            raise Exception("Weaviate connection failed")
+    except Exception as e:
+        st.error(f"Failed to connect to Weaviate: {str(e)}")
+        return None
         
         if client.is_ready():
             st.success("Weaviate Cloud connection successful!")
