@@ -12,6 +12,9 @@ import torch
 import time
 from pymongo import MongoClient
 
+# Load environment variables
+load_dotenv()
+
 def init_mongodb_client():
     try:
         import os

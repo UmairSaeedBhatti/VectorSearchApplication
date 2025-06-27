@@ -2,13 +2,14 @@
   "classes": [{
     "class": "Movie",
     "description": "A movie",
-    "vectorizer": "text2vec-transformers",
+    "vectorizer": "text2vec-weaviate",
     "moduleConfig": {
-      "text2vec-transformers": {
+      "text2vec-weaviate": {
         "model": "all-MiniLM-L6-v2",
         "type": "text"
       }
     },
+    "vectorIndexType": "hnsw",
     "properties": [
       {
         "name": "title",
