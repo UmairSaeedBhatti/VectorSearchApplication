@@ -3,6 +3,7 @@ import weaviate
 from weaviate.client import Client
 from weaviate.auth import AuthClientPassword
 from pymongo import MongoClient
+import os.path
 import json
 from sentence_transformers import SentenceTransformer
 import numpy as np
@@ -52,97 +53,36 @@ def init_mongodb_client():
 
 def init_weaviate_client():
     try:
-        import os
-        import weaviate
+        from weaviate import Client
         from weaviate.auth import AuthApiKey
-        
-        # Debug logging
-        print("\n=== Weaviate Client Initialization Debug ===")
-        print(f"Current working directory: {os.getcwd()}")
-        print(f"Looking for .env in: {os.path.dirname(os.path.abspath(__file__))}")
-        
-        # Load environment variables
-        print("\nLoading environment variables...")
-        print(f"WEAVIATE_URL: {os.getenv('WEAVIATE_URL')}")
-        print(f"WEAVIATE_API_KEY: {'***' + os.getenv('WEAVIATE_API_KEY')[-4:] if os.getenv('WEAVIATE_API_KEY') else 'Not set'}")
-        
-        # Check if .env file exists
-        import os.path
-        env_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '.env')
-        print(f"\n.env file exists: {os.path.exists(env_path)}")
-        
-        # Load credentials from environment variables
-        weaviate_host = os.getenv("WEAVIATE_HOST")
-        weaviate_user = os.getenv("WEAVIATE_USER")
-        weaviate_password = os.getenv("WEAVIATE_PASSWORD")
-        
-        if not weaviate_host or not weaviate_user or not weaviate_password:
-            print("\n=== Error Details ===")
-            print(f"WEAVIATE_HOST is set: {bool(weaviate_host)}")
-            print(f"WEAVIATE_USER is set: {bool(weaviate_user)}")
-            print(f"WEAVIATE_PASSWORD is set: {bool(weaviate_password)}")
-            raise ValueError("""Required environment variables are missing. Please set:
-1. WEAVIATE_HOST (your Weaviate instance URL)
-2. WEAVIATE_USER (your Weaviate username)
-3. WEAVIATE_PASSWORD (your Weaviate password)
+        import os
 
-These should be set in your .env file or through environment variables""")
-            
-        # Debug logging
-        print("\n=== Connection Details ===")
-        print(f"Using WEAVIATE_HOST: {weaviate_host}")
-        print(f"Using WEAVIATE_USER: {weaviate_user}")
-        print(f"Using WEAVIATE_PASSWORD: {'***' + weaviate_password[-4:]} if set")
-        
-        # Connect to Weaviate Cloud
-        print("\nAttempting to connect to Weaviate Cloud...")
-        client = weaviate.Client(
-            url=weaviate_host,
-            auth_client_secret=weaviate.AuthClientPassword(
-                username=weaviate_user,
-                password=weaviate_password
-            )
+        weaviate_url = os.getenv("WEAVIATE_URL")
+        weaviate_api_key = os.getenv("WEAVIATE_API_KEY")
+
+        if not weaviate_url or not weaviate_api_key:
+            raise ValueError("WEAVIATE_URL and WEAVIATE_API_KEY must be set in environment variables")
+
+        auth = AuthApiKey(api_key=weaviate_api_key)
+        client = Client(
+            url=weaviate_url,
+            auth_client_secret=auth,
+            additional_headers={
+                "X-OpenAI-Api-Key": os.getenv("OPENAI_API_KEY")  # Optional, for hybrid/vectorization
+            }
         )
-        
-        # Debug logging after connection
-        print("\n=== Connection Status ===")
-        print(f"Client is ready: {client.is_ready()}")
-        print(f"Client URL: {client.url}")
-        
-        if client.is_ready():
-            print("\n=== Connection Successful ===")
-            st.success("Weaviate Cloud connection successful!")
-            return client
-        else:
-            print("\n=== Connection Failed ===")
-            raise Exception("Weaviate connection failed")
-    except Exception as e:
-        print(f"\n=== Error Occurred ===")
-        print(f"Error type: {type(e).__name__}")
-        print(f"Error message: {str(e)}")
-        st.error(f"Failed to connect to Weaviate: {str(e)}")
-        st.info("Please make sure WEAVIATE_URL and WEAVIATE_API_KEY are correctly set")
-        return None
-        
+
         if client.is_ready():
             st.success("Weaviate Cloud connection successful!")
             return client
         else:
             raise Exception("Weaviate connection failed")
+
     except Exception as e:
         st.error(f"Failed to connect to Weaviate: {str(e)}")
+        st.info("Please check your WEAVIATE_URL and WEAVIATE_API_KEY settings.")
         return None
-        
-        if client.is_ready():
-            st.success("Weaviate Cloud connection successful!")
-            return client
-        else:
-            raise Exception("Weaviate connection failed")
-    except Exception as e:
-        st.error(f"Failed to connect to Weaviate: {str(e)}")
-        st.info("Please make sure Weaviate is running and accessible")
-        return None
-        
+
 
 def init_model():
     try:
