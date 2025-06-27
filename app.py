@@ -54,29 +54,64 @@ def init_weaviate_client():
     try:
         import os
         import weaviate
-        from weaviate.classes.init import Auth
+        from weaviate.auth import AuthApiKey
         
         # Debug logging
-        print("Loading environment variables...")
+        print("\n=== Weaviate Client Initialization Debug ===")
+        print(f"Current working directory: {os.getcwd()}")
+        print(f"Looking for .env in: {os.path.dirname(os.path.abspath(__file__))}")
+        
+        # Load environment variables
+        print("\nLoading environment variables...")
         print(f"WEAVIATE_URL: {os.getenv('WEAVIATE_URL')}")
         print(f"WEAVIATE_API_KEY: {'***' + os.getenv('WEAVIATE_API_KEY')[-4:] if os.getenv('WEAVIATE_API_KEY') else 'Not set'}")
+        
+        # Check if .env file exists
+        import os.path
+        env_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '.env')
+        print(f"\n.env file exists: {os.path.exists(env_path)}")
         
         # Load credentials from environment variables
         weaviate_url = os.getenv("WEAVIATE_URL")
         weaviate_api_key = os.getenv("WEAVIATE_API_KEY")
         
         if not weaviate_url or not weaviate_api_key:
+            print("\n=== Error Details ===")
+            print(f"WEAVIATE_URL is set: {bool(weaviate_url)}")
+            print(f"WEAVIATE_API_KEY is set: {bool(weaviate_api_key)}")
             raise ValueError("WEAVIATE_URL and WEAVIATE_API_KEY must be set in environment variables")
             
         # Debug logging
+        print("\n=== Connection Details ===")
         print(f"Using WEAVIATE_URL: {weaviate_url}")
         print(f"Using WEAVIATE_API_KEY: {'***' + weaviate_api_key[-4:]}")
-            
+        
         # Connect to Weaviate Cloud
-        client = weaviate.connect_to_weaviate_cloud(
-            cluster_url=weaviate_url,
-            auth_credentials=Auth.api_key(weaviate_api_key)
+        print("\nAttempting to connect to Weaviate Cloud...")
+        client = weaviate.Client(
+            url=weaviate_url,
+            auth_client_secret=AuthApiKey(api_key=weaviate_api_key)
         )
+        
+        # Debug logging after connection
+        print("\n=== Connection Status ===")
+        print(f"Client is ready: {client.is_ready()}")
+        print(f"Client URL: {client.url}")
+        
+        if client.is_ready():
+            print("\n=== Connection Successful ===")
+            st.success("Weaviate Cloud connection successful!")
+            return client
+        else:
+            print("\n=== Connection Failed ===")
+            raise Exception("Weaviate connection failed")
+    except Exception as e:
+        print(f"\n=== Error Occurred ===")
+        print(f"Error type: {type(e).__name__}")
+        print(f"Error message: {str(e)}")
+        st.error(f"Failed to connect to Weaviate: {str(e)}")
+        st.info("Please make sure WEAVIATE_URL and WEAVIATE_API_KEY are correctly set")
+        return None
         
         if client.is_ready():
             st.success("Weaviate Cloud connection successful!")
