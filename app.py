@@ -72,27 +72,35 @@ def init_weaviate_client():
         print(f"\n.env file exists: {os.path.exists(env_path)}")
         
         # Load credentials from environment variables
-        weaviate_url = os.getenv("WEAVIATE_URL")
-        weaviate_api_key = os.getenv("WEAVIATE_API_KEY")
+        weaviate_host = os.getenv("WEAVIATE_HOST")
+        weaviate_user = os.getenv("WEAVIATE_USER")
+        weaviate_password = os.getenv("WEAVIATE_PASSWORD")
         
-        if not weaviate_url or not weaviate_api_key:
+        if not weaviate_host or not weaviate_user or not weaviate_password:
             print("\n=== Error Details ===")
-            print(f"WEAVIATE_URL is set: {bool(weaviate_url)}")
-            print(f"WEAVIATE_API_KEY is set: {bool(weaviate_api_key)}")
-            raise ValueError("WEAVIATE_URL and WEAVIATE_API_KEY must be set in environment variables")
+            print(f"WEAVIATE_HOST is set: {bool(weaviate_host)}")
+            print(f"WEAVIATE_USER is set: {bool(weaviate_user)}")
+            print(f"WEAVIATE_PASSWORD is set: {bool(weaviate_password)}")
+            raise ValueError("""Required environment variables are missing. Please set:
+1. WEAVIATE_HOST (your Weaviate instance URL)
+2. WEAVIATE_USER (your Weaviate username)
+3. WEAVIATE_PASSWORD (your Weaviate password)
+
+These should be set in your .env file or through environment variables""")
             
         # Debug logging
         print("\n=== Connection Details ===")
-        print(f"Using WEAVIATE_URL: {weaviate_url}")
-        print(f"Using WEAVIATE_API_KEY: {'***' + weaviate_api_key[-4:]}")
+        print(f"Using WEAVIATE_HOST: {weaviate_host}")
+        print(f"Using WEAVIATE_USER: {weaviate_user}")
+        print(f"Using WEAVIATE_PASSWORD: {'***' + weaviate_password[-4:]} if set")
         
         # Connect to Weaviate Cloud
         print("\nAttempting to connect to Weaviate Cloud...")
         client = weaviate.Client(
-            url=os.getenv("WEAVIATE_HOST"),
+            url=weaviate_host,
             auth_client_secret=weaviate.AuthClientPassword(
-                username=os.getenv("WEAVIATE_USER"),
-                password=os.getenv("WEAVIATE_PASSWORD")
+                username=weaviate_user,
+                password=weaviate_password
             )
         )
         
